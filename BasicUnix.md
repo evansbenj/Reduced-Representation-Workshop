@@ -8,4 +8,10 @@ To see what directory you are in, type this:
 `pwd`
 and then hit `return`.
 
-This should print out the home directory.  Each backslash indicates the name of a directory.
+This command (short for "print working direcotry" should print out the home directory.  Each forwardslash divides the name of a directory; the directories listed on the right side are inside the ones that are on the left.
+
+Now let see what is in this directory.  Please type this:
+`ls`.  
+This command (short for "list") should list all of the files in the directory you are in.  If you want more information about these files you can type this:
+`ls -l`
+Now each file gets its own line with the name of the file on the right side. You should see some letters and numbers which specify who can access and manipulate each file, and also the file size and date that the file was last modified.
