@@ -17,7 +17,7 @@ followed by the path (the directory structure) that you want to go to.  Let's go
 `cd` **(add the path here)**
 
 Now let see what is in this directory.  Please type this:
-`ls`.  
+`ls`.
 This command (short for "list") should list all of the files in the directory you are in.  
 
 If you want more information about these files you can type this:
