@@ -88,14 +88,14 @@ This should open an `emacs` session.  Please now type this:
 
 `#!/bin/bash`
 
-`files=”apples`
+`files="apples`
 `pears`
 `grapefruits`
 `pineapples"`
 
 `for file in $files`
 `do`
-`	print ${file}`
+`	echo ${file}`
 `done`
 
 
