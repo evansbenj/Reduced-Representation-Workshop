@@ -86,17 +86,17 @@ As an example, lets use `emacs` to make a simple script that we can run on the s
 
 This should open an `emacs` session.  Please now type this:
 
-`#!/bin/bash
+`#!/bin/bash`
 
-files=”apples
-pears
-grapefruits
-pineapples”
+`files=”apples`
+`pears`
+`grapefruits`
+`pineapples"`
 
-for file in $files
-do
-	print ${file}
-done`
+`for file in $files`
+`do`
+`	print ${file}`
+`done`
 
 
 
