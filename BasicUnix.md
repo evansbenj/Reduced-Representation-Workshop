@@ -96,7 +96,7 @@ pineapples”
 for file in $files
 do
 	print ${file}
-done'
+done`
 
 
 
