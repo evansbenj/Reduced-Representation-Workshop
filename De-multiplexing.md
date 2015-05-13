@@ -25,8 +25,7 @@ When samples are run on an Illumina machine, DNA is broken up into many small fr
 
 `PM602 ATCCGTCTAC`
 
-
-
+We will use this information in a moment to de-multiplex our data.  Lets use emacs to make a text file that contains this information.  Please type `emacs monkey.pools` to generate a file called `monkey.pools`.  Now type the information above in the file.  When you are done type `Ctrl-X` and `Ctrl-S` to save it and then `Ctrl-X` and `Ctrl-C` to close the program.
 
 ## Fasta and Fastq format
 
