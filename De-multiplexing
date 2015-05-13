@@ -8,3 +8,4 @@ Most RRGS methods rely on the Illumina sequencing platform.  These machines gene
 ## Quality control and trimming
 
 Similar to Sanger sequencing, Illumina generates sequences that have errors.  Errors typically become more common towards the end of the sequence read, and the software will sometimes (but not always) insert an "N" in positions where the base pair is difficult to call.  But sometimes it makes an incorrect call as well.  
+
