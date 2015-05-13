@@ -54,7 +54,27 @@ The `screen` command allows you to execute a job on a server and then log out.  
 
 `man screen`
 
+This should bring up a description of the details of the command.  You can scroll through it by hitting any key or exit by typing `q`.
 
+When I am running multiple screens, I usually name them like this:
+
+`screen -S add_description_here`
+
+This brings you into a screen session called `add_description_here`.  You can exit it by typing `Ctrl-A` and then `Crtl-D`, meaning you hold down the control button and type `A` and then hold down the control button again and type `D`.
+
+You can then see what screens are running by typing this:
+
+`screen -list`
+
+and return to an active screen by typing this:
+
+`screen -r -S add_description_here`
+
+or end an active screen like this:
+
+`screen -X -S add_description_here kill`
+
+Here the `-X` flag tells screen that a command is to be delivered to the screen named `add_description_here`.  The `kill` command at the end tells screen to end this screen.
 
 ## Text editing and making a bash script
 
