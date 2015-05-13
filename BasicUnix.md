@@ -3,6 +3,7 @@
 All of the software in this workshop is available for free and runs on a Unix operating system.  In order to use these applications, we need to know/review a few basic commands that will allow us to move through directories, copy and edit files, and see what is in a directory.
 
 To connect to the Unix system we are using, do this **(to be edited later)**:
+
 `ssh XXXX`
 
 To see what directory you are in, type this:
