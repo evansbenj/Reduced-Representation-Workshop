@@ -17,15 +17,18 @@ followed by the path (the directory structure) that you want to go to.  Let's go
 `cd` **(add the path here)**
 
 Now let see what is in this directory.  Please type this:
-`ls`.
+`ls`
+
 This command (short for "list") should list all of the files in the directory you are in.  
 
 If you want more information about these files you can type this:
-`ls -l`.
+`ls -l`
+
 Now each file gets its own line with the name of the file on the right side. You should see some letters and numbers which specify who can access and manipulate each file, and also the file size and date that the file was last modified.
 
-Sometimes we need to see what is inside a file. For text files you can use the more command to scroll through the file from the begining.  Type this:
+Sometimes we need to see what is inside a file. For text files you can use the more command to scroll through the file from the begining.  Please type this:
 `more ` **filename**.
+
 where **filename** is the full name (including the suffix) of a file you can see in this directory.  You can use the spacebar to scroll down or type `q` to return to the prompt.
 
 
