@@ -1,7 +1,6 @@
 # De-multiplexing Illumina Data
 
 Most RRGS methods rely on the Illumina sequencing platform.  These machines generate data using something called a "flowcell" that is divided up into eight "lanes".  Small scale projects typically would run multiple samples (from different species or different individuals within a species) on one lane.  
-
 ## De-Multiplexing
 
 ## Fasta and Fastq format
