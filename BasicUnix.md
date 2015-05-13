@@ -78,7 +78,7 @@ Here the `-X` flag tells screen that a command is to be delivered to the screen 
 
 ## Text editing and making a bash script
 
-It is often useful to edit text files on a server and most servers have software installed to facilitate this.  The one I usually use is called "emacs" (http://www.gnu.org/software/emacs/); another popular text editor is "vim" (http://www.vim.org/about.php).
+It is often useful to edit text files on a server and most servers have software installed to facilitate this.  The one I usually use is called [emacs](http://www.gnu.org/software/emacs/); another popular text editor is [vim](http://www.vim.org/about.php).
 
 As an example, lets use `emacs` to make a simple script that we can run on the server.  Please type this:
 
