@@ -88,16 +88,27 @@ This should open an `emacs` session.  Please now type this:
 
 `#!/bin/bash`
 
-`files="apples`
-`pears`
-`grapefruits`
-`pineapples"`
+`fruits="apples pears grapefruits pineapples"`
 
-`for file in $files`
+`for type_of_fruit in $files`
 `do`
-`	echo ${file}`
+`	echo ${type_of_fruit}`
 `done`
 
+Now save this by typing `Ctrl-X` and `Ctrl-S`.
 
+Using the list command described above (`ls`) you should be able to see your file in the directory you are in.
+
+In order to make this text file into an executeable program, we need to change a characteristic of the program called its permissions.  This can be done like this:
+
+`chmod a+x fruit_script`
+
+And you can now try to run the program like this:
+
+`./fruit_script`
+
+Here the dot forwardslash (`./`) tells the computer that you want it to look in the directory that you are currently in for the program called `fruit_script`.
+
+If your script lacks errors, you should see the names of the fruit you had in the program.  If it gives you an error, please let Ben know.
 
 
