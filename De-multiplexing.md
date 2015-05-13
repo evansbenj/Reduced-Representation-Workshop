@@ -29,6 +29,15 @@ We will use this information in a moment to de-multiplex our data.  Lets use ema
 
 ## Fasta and Fastq format
 
+Illumina sequence data is provided in a text file that is in a format called `fastq`.  This is a modification of another format called `fasta` in which each sequence has a header that begins with a `>` sign.  This is followed by the sequences.  Here is an example:
+
+`>example_sequence_in_fasta_format`
+
+`ATGCGCGCGCTAGGCTCGCGATCGGGGAGCGCGAGCTGAGCTAGCGCGATGCGCCCCGAC`
+
+The format of `fastq` files is similar to `fasta` except that quality scores are included.  Each sequence has four lines (instead of two for `fasta` files).  The first begins with `@` followed by information about the sequence.  The second line is the nucleotide sequence. The third line is a `+` which may be followed by the same information that followed the `@` sign in the first line.  The fourth line is the quality values.  For the Illumina data we will be working with, these values range from 0–41 and are represented by single characters.  Further information is provided (here) [http://en.wikipedia.org/wiki/FASTQ_format].
+
+
 ## Quality control and trimming
 
 Similar to Sanger sequencing, Illumina generates sequences that have errors.  Errors typically become more common towards the end of the sequence read, and the software will sometimes (but not always) insert an "N" in positions where the base pair is difficult to call.  But sometimes it makes an incorrect call as well.  
