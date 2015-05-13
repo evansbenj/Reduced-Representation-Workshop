@@ -2,6 +2,8 @@
 
 All of the software in this workshop is available for free and runs on a Unix operating system.  In order to use these applications, we need to know/review a few basic commands that will allow us to move through directories, copy and edit files, and see what is in a directory.
 
+## Some Unix Basics
+
 To connect to the Unix system we are using, do this **(to be edited later)**:
 
 `ssh XXXX`
@@ -45,6 +47,18 @@ If you need to rename a file you can type this:
 `mv oldfinename newfilename`
 
 Here `mv` is short for "move".
+
+## Using `screen` in Unix
+
+The `screen` command allows you to execute a job on a server and then log out.  This is useful for our purposes because RRGS generates large datasets that sometimes take a while to analyze.  We generally do data processing on a server (and not on your desktop computer), and we don't want to have to sit and watch our computer for hours or days while a program runs.  Like all commands in Unix, you can look at the manual for a command by typing `man ' and then the command.  So, please type this:
+
+`man screen`
+
+
+
+## Text editing and making a bash script
+
+It is often useful to edit text files on a server and most servers have software installed to facilitate this.  The one I usually use is called "emacs" (http://www.gnu.org/software/emacs/); another popular text editor is "vim" (http://www.vim.org/about.php).
 
 
 
