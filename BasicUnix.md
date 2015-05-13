@@ -60,7 +60,7 @@ When I am running multiple screens, I usually name them like this:
 
 `screen -S add_description_here`
 
-This brings you into a screen session called `add_description_here`.  You can exit it by typing `Ctrl-A` and then `Crtl-D`, meaning you hold down the control button and type `A` and then hold down the control button again and type `D`.
+This brings you into a screen session called `add_description_here`.  You can exit it by typing `Ctrl-A` and then `Ctrl-D`, meaning you hold down the control button and type `A` and then hold down the control button again and type `D`.
 
 You can then see what screens are running by typing this:
 
@@ -70,7 +70,7 @@ and return to an active screen by typing this:
 
 `screen -r -S add_description_here`
 
-or end an active screen like this:
+where the flag `-r` means return to the screen (`-S`) named `add_description_here`.  Or you end an active screen like this:
 
 `screen -X -S add_description_here kill`
 
@@ -79,6 +79,24 @@ Here the `-X` flag tells screen that a command is to be delivered to the screen 
 ## Text editing and making a bash script
 
 It is often useful to edit text files on a server and most servers have software installed to facilitate this.  The one I usually use is called "emacs" (http://www.gnu.org/software/emacs/); another popular text editor is "vim" (http://www.vim.org/about.php).
+
+As an example, lets use `emacs` to make a simple script that we can run on the server.  Please type this:
+
+`emacs fruit_script`
+
+This should open an `emacs` session.  Please now type this:
+
+`#!/bin/bash
+
+files=”apples
+pears
+grapefruits
+pineapples”
+
+for file in $files
+do
+	print ${file}
+done'
 
 
 
