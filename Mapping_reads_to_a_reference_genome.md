@@ -4,8 +4,12 @@ Depending on your organism of study, there may or may not be a relatively closel
 
 ## Preparing your reference genome
 
-Reference genomes for many sequences are available at multiple publicly available databases.  We can download the complete genome sequence for the rhesus macaque from the [USC genome browser](http://hgdownload.cse.ucsc.edu/downloads.html#rhesus).  I did this earlier because it takes a while.  It is located in this directory:
+Reference genomes for many sequences are available at multiple publicly available databases.  We can download the complete genome sequence for the rhesus macaque from the [USC genome browser](http://hgdownload.cse.ucsc.edu/downloads.html#rhesus).  I did this earlier because it takes a while.  It is a fasta-formatted file, and is located in this directory:
 
-** insert path to rhesus macaquer genome here **
+** insert path to rhesus macaque genome here **
 
+Before we map our data to this reference genome, we need to generate some files that will be used in the mapping process.
 
+./bwa index -a bwtsw **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
+
+./samtools faidx /work/ben/XL_unigene/Xl.seq.uniq
