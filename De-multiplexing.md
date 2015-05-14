@@ -6,7 +6,7 @@ A first step in our analysis pipeline is to organize data from each of our sampl
 
 ## De-Multiplexing
 When samples are run on an Illumina machine, DNA is broken up into many small fragments and a small bit of DNA called an adaptor is then added on each of the fragments. This adaptor allows the sequencing process to occur, essentially by making possible high-throughput put polymerase chain reaction (ask Ben about this if you are unfamiliar). To make possible the multiplexing of samples on one Illumina lane, each sample is linked to a unique adaptor that contains a "barcode" sequence that allows us to sort out which samples each sequence came from.  For our dataset, we have nine individuals from one species (the Tonkean macaque). Each of the samples received the following barcodes (the sample name is followed by the barcode):
-
+```
 `PF515 CCTCTTATCA`
 
 `PM561 TATCGTTAGT`
@@ -18,11 +18,12 @@ When samples are run on an Illumina machine, DNA is broken up into many small fr
 `PM567 AGGAACCTCG`
 
 `PM582 TTATCCGTAG`
-
-`PM584 CGCTATACGG`
-`PM592 CACGCAACGA`
-`PM602 ATCCGTCTAC`
-
+```
+```
+PM584 CGCTATACGG
+PM592 CACGCAACGA
+PM602 ATCCGTCTAC
+```
 We will use this information in a moment to de-multiplex our data.  Lets use emacs to make a text file that contains this information.  Please type `emacs monkey.pools` to generate a file called `monkey.pools`.  Now copy and paste the information above to your emacs window.  Then type `Ctrl-X` and `Ctrl-S` to save it and then `Ctrl-X` and `Ctrl-C` to close the program.
 
 ## Fasta and Fastq format
