@@ -26,4 +26,10 @@ Before we map our data to this reference genome, we need to generate some files 
 
   This should generate a file called "**rhesus_genome_fasta_file**.dict"
 
+## Mapping the data to the reference genome
+
+Now we can align the data from each individual to the reference genome using `bwa` as follows:
+
+./bwa aln individual_1.fastq > individual_1.sai
+
 
