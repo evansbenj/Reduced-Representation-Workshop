@@ -35,10 +35,29 @@ Illumina sequence data is provided in a text file that is in a format called `fa
 
 `ATGCGCGCGCTAGGCTCGCGATCGGGGAGCGCGAGCTGAGCTAGCGCGATGCGCCCCGAC`
 
-The format of `fastq` files is similar to `fasta` except that quality scores are included.  Each sequence has four lines (instead of two for `fasta` files).  The first begins with `@` followed by information about the sequence.  The second line is the nucleotide sequence. The third line is a `+` which may be followed by the same information that followed the `@` sign in the first line.  The fourth line is the quality values.  For the Illumina data we will be working with, these values range from 0–41 and are represented by single characters.  More details about fastq format is available [here](http://en.wikipedia.org/wiki/FASTQ_format).
+The format of `fastq` files is similar to `fasta` except that quality scores are included.  Each sequence has four lines (instead of two for `fasta` files).  The first begins with `@` followed by information about the sequence.  The second line is the nucleotide sequence. The third line is a `+` which may be followed by the same information that followed the `@` sign in the first line.  The fourth line is the quality values.  For the Illumina data we will be working with, these values range from 0–41 and are represented by single characters.  More details about fastq format is available [here](http://en.wikipedia.org/wiki/FASTQ_format).  Here is an example of a sequence in fastq format:
 
+`@HWI-ST724:202:D127MACXX:6:2114:13665:74490`
+
+`TGCAGGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGAAATTTTTGGGCACAAAGAACCACAGAAAAAAAATGAAAA`
+
+`+HWI-ST724:202:D127MACXX:6:2114:13665:74490`
+
+`AFHJJJFIJJJJIJJJJJHFDDDDDB0530&0)00&)0&05007BDD############################################`
+
+In this sequence the number signs indicate low quality reads at the end (right side) of the sequence.
 
 ## Quality control and trimming
 
-Similar to Sanger sequencing, Illumina generates sequences that have errors.  Errors typically become more common towards the end of the sequence read, and the software will sometimes (but not always) insert an "N" in positions where the base pair is difficult to call.  But sometimes it makes an incorrect call as well.  
+A first step in analysis of Illumina data is to identify adaptor and barcode sequences in our data, sort sequneces by the barcode, and then trim off the adaptor and barcode sequences.  We can also get rid of sequences that have ambiguous barcodes due to sequencing errors.
+
+Illumina generates sequences that have errors in base calls.  Errors typically become more common towards the end of the sequence read, and sometimes (but not always) an "N" is inserted in positions where the base pair is difficult to call.  But sometimes it makes an incorrect call as well. 
+
+We will use software called `RADpools` to de-multiplex and trim our data.  This software is available [here](https://github.com/johnomics/RADtools/blob/master/RADpools).
+
+The command to execute this program on our data is:
+
+`./RADpools -i **path_to_data**/data -d **path_to_barcode_file**/monkey.pools -o`
+
+The first part (`./RADpools`) directs the computer to run the program RADpools.  The `-i` flag specifies where the data are.  The `-d` flag specifies where the barcode file is that we made eariler.  The `-o` flag directs RADpools to output the trimmed data in fastq format.  This will take a little while to run so let's get it started now and then move on to the next step.  
 
