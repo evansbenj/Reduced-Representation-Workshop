@@ -32,7 +32,7 @@ Now we can align the data from each individual to the reference genome using `bw
 
 `./bwa aln individual_1.fastq > individual_1.sai`
 
-Add a header and generate sam files
+Add a header and generate `.sam` files
 
 `./bwa samse -r "@RG\tID:FLOWCELL1.LANE6\tSM:Individual_1\tPL:illumina" Individual_1.fa Individual_1.sai Individual_1.fastq > Individual_1.sam`
 
@@ -40,7 +40,7 @@ Generate a `.bam` file:
 
 `./samtools view -bt Individual_1.fa -o Individual_1.bam Individual_1.sam`
 
-Sort the bam file:
+Sort the `.bam` file:
 
 `./samtools sort Individual_1.bam Individual_1_sorted`
 
@@ -48,3 +48,4 @@ Make a `.bai` file:
 
 `./samtools index Individual_1_sorted.bam`
 
+OK, if this all went smoothly we are now ready to make some genotype calls.
