@@ -12,18 +12,18 @@ Before we map our data to this reference genome, we need to generate some files 
 
 1. ./bwa index -a bwtsw **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
 
-The `./bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indivated by the `**path_to_rhesus_genome**/**rhesus_genome_fasta_file**`.  The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.
+  The `./bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indivated by the `**path_to_rhesus_genome**/**rhesus_genome_fasta_file**`.  The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.
 
 2. We now need to to generate another file using `samtools`.  Please type this:
 
-./samtools faidx **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
+  ./samtools faidx **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
 
-This generates a file called `**rhesus_genome_fasta_file**.fai` in which each line has information for one the contigs within the reference genome including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
+  This generates a file called `**rhesus_genome_fasta_file**.fai` in which each line has information for one the contigs within the reference genome including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
 
 3.  The third thing we need to do is to generate a `.dict` file with a program called [`piccard`](http://broadinstitute.github.io/picard/).  Please type this command:
 
-`java -jar picard.jar CreateSequenceDictionary REFERENCE=reference.fa OUTPUT=reference.dict`
+  `java -jar picard.jar CreateSequenceDictionary REFERENCE=**rhesus_genome_fasta_file** OUTPUT=**rhesus_genome_fasta_file**.dict`
 
-
+  This should generate a file called "**rhesus_genome_fasta_file**.dict"
 
 
