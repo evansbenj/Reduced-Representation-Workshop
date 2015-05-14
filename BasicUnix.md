@@ -40,7 +40,9 @@ Sometimes we need to see what is inside a file. For text files you can use the m
 
 `more ` **filename**.
 
-where **filename** is the full name (including the suffix) of a file you can see in this directory.  You can use the spacebar to scroll down or type `q` to return to the prompt.
+where **filename** is the full name (including the suffix) of a file you can see in this directory.  You can use the spacebar to scroll down or type `q` to return to the prompt.  If you happen to want to look at a compressed file that has the suffix `.gz`, you can type this:
+
+`zmore ` **filename**.
 
 If you need to rename a file you can type this:
 
@@ -50,7 +52,7 @@ Here `mv` is short for "move".
 
 ## Using `screen` in Unix
 
-The `screen` command allows you to execute a job on a server and then log out.  This is useful for our purposes because RRGS generates large datasets that sometimes take a while to analyze.  We generally do data processing on a server (and not on your desktop computer), and we don't want to have to sit and watch our computer for hours or days while a program runs.  Like all commands in Unix, you can look at the manual for a command by typing `man ' and then the command.  So, please type this:
+The `screen` command allows you to execute a job on a server and then log out.  This is useful for our purposes because RRGS generates large datasets that sometimes take a while to analyze.  We generally do data processing on a server (and not on your desktop computer), and we don't want to have to sit and watch our computer for hours or days while a program runs.  Like all commands in Unix, you can look at the manual for a command by typing `man` and then the command.  So, please type this:
 
 `man screen`
 
