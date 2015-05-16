@@ -42,7 +42,7 @@ Add a header and generate `.sam` files
 
 The format for this command is:
 
-`bwa samse ref.fa aln_sa.sai short_read.fq > aln-se.sam`
+`bwa samse reference_genome individual_1.sai individual_1.fq > individual_1.sam`
 
 We also need to add a header to the file so you can try thiis
 
@@ -50,7 +50,7 @@ We also need to add a header to the file so you can try thiis
 
 Now generate a `.bam` file:
 
-`./samtools view -bt Individual_1.fa -o Individual_1.bam Individual_1.sam`
+`./samtools view -bt reference_genome -o Individual_1.bam Individual_1.sam`
 
 Sort the `.bam` file:
 
