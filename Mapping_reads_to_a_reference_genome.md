@@ -18,7 +18,7 @@ Before we map our data to this reference genome, we need to generate some files 
 
 1. ./bwa index -a bwtsw **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
 
-  The `./bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indivated by the `**path_to_rhesus_genome**/**rhesus_genome_fasta_file**`.  The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.
+  The `./bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indivated by the `**path_to_rhesus_genome**/**rhesus_genome_fasta_file**`.  The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.  This step will a few minutes.
 
 2. We now need to to generate another file using `samtools`.  Please type this:
 
