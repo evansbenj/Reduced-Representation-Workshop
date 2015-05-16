@@ -24,7 +24,7 @@ Before we map our data to this reference genome, we need to generate some files 
 
   ./samtools faidx **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
 
-  This generates a file called `**rhesus_genome_fasta_file**.fai` in which each line has information for one the contigs within the reference genome including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
+  Here, the `./samtools` command tells the computer to execute the `samtools` program.  The `faidx` option tells samtools to generate a file called `**rhesus_genome_fasta_file**.fai` in which each line has information for one the contigs within the reference genome including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
 
 3.  The third thing we need to do is to generate a `.dict` file with a program called [`piccard`](http://broadinstitute.github.io/picard/).  Please type this command:
 
