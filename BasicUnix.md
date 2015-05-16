@@ -113,4 +113,4 @@ Here the dot forwardslash (`./`) tells the computer that you want it to look in 
 
 If your script lacks errors, you should see the names of the fruit you had in the program.  If it gives you an error, please let Ben know.
 
-
+## OK, now lets learn how to de-multiplex Illumina data by clicking [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/De-multiplexing.md).
