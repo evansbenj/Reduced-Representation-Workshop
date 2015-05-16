@@ -10,6 +10,10 @@ Reference genomes for many sequences are available at multiple publicly availabl
 
 ** insert path to rhesus macaque genome here **
 
+Please go to this directory using this command:
+
+`cd ** insert path to rhesus macaque genome here **`
+
 Before we map our data to this reference genome, we need to generate some files that will be used in the mapping process.  This can be done in three steps:
 
 1. ./bwa index -a bwtsw **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
