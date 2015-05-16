@@ -36,7 +36,7 @@ Before we map our data to this reference genome, we need to generate some files 
 
 Now we can align the data from each individual to the reference genome using `bwa` as follows:
 
-`./bwa aln individual_1.fastq > individual_1.sai`
+`./bwa aln reference_genome individual_1.fastq > individual_1.sai`
 
 Add a header and generate `.sam` files
 
