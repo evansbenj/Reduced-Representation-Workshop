@@ -1,6 +1,6 @@
 # De-multiplexing Illumina Data
 
-(or you can go back to the basic Unix page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/BasicUnix.md)).
+(or you can go back to the Basic Unix page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/BasicUnix.md)).
 
 Most RRGS methods rely on the Illumina sequencing platform.  These machines generate data using something called a "flowcell" that is divided up into eight "lanes".  Small scale projects typically would run multiple samples (from different species or different individuals within a species) on one lane.  
 
