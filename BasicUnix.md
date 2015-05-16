@@ -1,5 +1,7 @@
 # Basic Unix use
 
+(Or you can go back to the Readme page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/README.md)).
+
 All of the software in this workshop is available for free and runs on a Unix operating system.  In order to use these applications, we need to know/review a few basic commands that will allow us to move through directories, copy and edit files, and see what is in a directory.
 
 ## Some Unix Basics
