@@ -53,3 +53,4 @@ The command to execute this program on our data is:
 
 The first part (`./RADpools`) directs the computer to run the program RADpools.  The `-i` flag specifies where the data are.  The `-d` flag specifies where the barcode file is that we made eariler.  The `-o` flag directs RADpools to output the trimmed data in fastq format.  This will take a little while to run so let's get it started now and then move on to the next step.  
 
+## OK, now we are ready to move on to mapping reads to a reference genome.  Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/Mapping_reads_to_a_reference_genome.md).
