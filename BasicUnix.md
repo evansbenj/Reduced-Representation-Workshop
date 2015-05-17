@@ -96,8 +96,9 @@ fruits="apples pears grapefruits pineapples"
 
 for type_of_fruit in $files
 do
-	echo ${type_of_fruit}
-done```
+	echo ${fruits}
+done
+```
 
 Now save this by typing `Ctrl-X` and `Ctrl-S`.
 
