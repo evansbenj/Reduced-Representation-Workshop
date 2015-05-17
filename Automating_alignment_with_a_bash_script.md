@@ -51,7 +51,7 @@ Now type `Ctrl-x` and `Ctrl-s` to save the file.
 
 Now we need to make the file executable, so type this:
 
-`chmod +x alignment commando`
+`chmod +x alignment_commando`
 
 And now we should be able to execute the file.  Type this:
 
