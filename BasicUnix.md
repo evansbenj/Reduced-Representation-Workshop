@@ -91,7 +91,7 @@ As an example, lets use `emacs` to make a simple script that we can run on the s
 This should open an `emacs` session.  Please now type this:
 
 ```
-&lt#&lt!/bin/bash
+#!/bin/bash
 
 fruits="apples pears grapefruits pineapples"
 
