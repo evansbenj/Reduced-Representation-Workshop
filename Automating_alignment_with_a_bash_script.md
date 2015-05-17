@@ -45,7 +45,7 @@ In the beginning of the script 5 variables are defined that specify, respectivel
 
 `emacs alignment_commando`
 
-This should open up an emacs window.  You can then paste the bash script into this window.  Now use the arrow keys to scroll up to the line that says 'chromosome="chr3.fa"` and change the part that says `chr3.fa` to correspond with whatever chromosome you are working on.  For example, if youa re working on chromosome 10, please change this to instead read `chr10.fa`.
+This should open up an emacs window.  You can then paste the bash script into this window.  Now use the arrow keys to scroll up to the line that says `chromosome="chr3.fa"` and change the part that says `chr3.fa` to correspond with whatever chromosome you are working on.  For example, if youa re working on chromosome 10, please change this to instead read `chr10.fa`.
 
 Now type `Ctrl-x` and `Ctrl-s` to save the file.
 
