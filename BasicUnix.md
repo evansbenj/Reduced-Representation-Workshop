@@ -95,9 +95,9 @@ This should open an `emacs` session.  Please now type this:
 
 fruits="apples pears grapefruits pineapples"
 
-for type_of_fruit in $files
+for type_of_fruit in fruits
 do
-	echo ${fruits}
+	echo ${type_of_fruit}
 done
 ```
 
