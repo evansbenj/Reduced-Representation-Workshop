@@ -107,9 +107,9 @@ Using the list command described above (`ls`) you should be able to see your fil
 
 In order to make this text file into an executeable program, we need to change a characteristic of the program called its permissions.  This can be done like this:
 
-`chmod a+x fruit_script`
+`chmod +x fruit_script`
 
-And you can now try to run the program like this:
+Here the `+x` means that we want to add the ability to execute the program.  And we can run the program like this:
 
 `./fruit_script`
 
