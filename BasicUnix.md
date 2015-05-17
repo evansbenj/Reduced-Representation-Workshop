@@ -101,7 +101,7 @@ do
 done
 ```
 
-Now save this by typing `Ctrl-X` and `Ctrl-S`.
+Now save this by typing `Ctrl-x` and `Ctrl-x`.  (As a reminder, this just means that you should hold down the `Ctrl` button while you press the `x` button and then hold down the `Ctrl` button while you press the `s` button.
 
 Using the list command described above (`ls`) you should be able to see your file in the directory you are in.
 
