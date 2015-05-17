@@ -90,14 +90,14 @@ As an example, lets use `emacs` to make a simple script that we can run on the s
 
 This should open an `emacs` session.  Please now type this:
 
-`#!/bin/bash`
+```#!/bin/bash
 
-`fruits="apples pears grapefruits pineapples"`
+fruits="apples pears grapefruits pineapples"
 
-`for type_of_fruit in $files`
-`do`
-`	echo ${type_of_fruit}`
-`done`
+for type_of_fruit in $files
+do
+	echo ${type_of_fruit}
+done```
 
 Now save this by typing `Ctrl-X` and `Ctrl-S`.
 
