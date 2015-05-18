@@ -1,6 +1,6 @@
 # Automating alignments to a reference genome with a bash script
 
-Or you can go back to (mapping reads to a reference genome)[].
+(Or you can go back to [mapping reads to a reference genome](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/Mapping_reads_to_a_reference_genome.md)).
 
 Now that you have seen how to align data from one individual to a reference genome, we can automate the alignment of all individuals to the reference genome using a bash script.  We can accomplish this by defining an `array` that contains the names of all of the individuals in the analysis and then looping through this array and executing each of the commands for each individual.
 
@@ -59,3 +59,4 @@ And now we should be able to execute the file.  Type this:
 
 `./alignment_commando`
 
+Once this is done, we can try working with the program [Stacks](http://creskolab.uoregon.edu/stacks/manual/).  Stacks is actually a suite of programs that can analyze reduced representation genome sequencing data.  It can help us compile these data, calculate summary statistics, and also output the data to other software for further analysis.  
