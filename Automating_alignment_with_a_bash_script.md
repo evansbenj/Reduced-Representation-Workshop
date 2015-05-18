@@ -61,4 +61,4 @@ And now we should be able to execute the file.  Type this:
 
 Once this is done, we can try working with the program [Stacks](http://creskolab.uoregon.edu/stacks/manual/).  Stacks is actually a suite of programs will help us compile these data, calculate summary statistics, and also output the data to other software for further analysis.  
 
-## Please click [here] to go to the next page on using Stacks.
+## Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/Using_Stacks_with_a_reference_genome.md) to go to the next page on using Stacks.
