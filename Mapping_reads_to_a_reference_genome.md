@@ -60,4 +60,4 @@ Make a `.bai` file:
 
 `./samtools index Individual_1_sorted.bam`
 
-OK, if this all went smoothly we are now ready to make some genotype calls.
+OK, if this all went smoothly we are now ready to make some genotype calls.  Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/Automating_alignment_with_a_bash_script.md).
