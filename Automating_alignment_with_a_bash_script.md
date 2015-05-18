@@ -1,4 +1,6 @@
-# Automating an alignment with a bash script
+# Automating alignments to a reference genome with a bash script
+
+Or you can go back to ()[].
 
 Now that you have seen how to align data from one individual to a reference genome, we can automate the alignment of all individuals to the reference genome using a bash script.  We can accomplish this by defining an `array` that contains the names of all of the individuals in the analysis and then looping through this array and executing each of the commands for each individual.
 
