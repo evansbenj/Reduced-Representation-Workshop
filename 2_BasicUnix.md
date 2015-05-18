@@ -1,6 +1,6 @@
 # Basic Unix use
 
-(Or you can go back to the Readme page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/README.md)).
+(Or you can go back to the Readme page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/1_README.md)).
 
 All of the software in this workshop is available for free and runs on a Unix operating system.  In order to use these applications, we need to know/review a few basic commands that will allow us to move through directories, copy and edit files, and see what is in a directory.
 
@@ -117,4 +117,4 @@ Here the dot forwardslash (`./`) tells the computer that you want it to look in 
 
 If your script lacks errors, you should see the names of the fruit you had in the program.  If it gives you an error, please let Ben know.
 
-## OK, now lets learn how to de-multiplex Illumina data by clicking [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/De-multiplexing.md).
+## OK, now lets learn how to de-multiplex Illumina data by clicking [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/3_De-multiplexing.md).
