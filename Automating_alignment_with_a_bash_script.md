@@ -59,4 +59,6 @@ And now we should be able to execute the file.  Type this:
 
 `./alignment_commando`
 
-Once this is done, we can try working with the program [Stacks](http://creskolab.uoregon.edu/stacks/manual/).  Stacks is actually a suite of programs that can analyze reduced representation genome sequencing data.  It can help us compile these data, calculate summary statistics, and also output the data to other software for further analysis.  
+Once this is done, we can try working with the program [Stacks](http://creskolab.uoregon.edu/stacks/manual/).  Stacks is actually a suite of programs will help us compile these data, calculate summary statistics, and also output the data to other software for further analysis.  
+
+## Please click [here] to go to the next page on using Stacks.
