@@ -1,6 +1,6 @@
 # Mapping Reads to a Reference Genome
 
-(or you can go back to the de-multipexing page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/De-multiplexing.md)).
+(or you can go back to the de-multipexing page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/3_De-multiplexing.md)).
 
 Depending on your organism of study, there may or may not be a relatively closely related genome sequence to work with.  Depending on your research question, this may or may not be useful.  In our example study on Tonkean macaques, we are ultimately interested in quantifying molecular polymorphism on the X chromosome and comparing it to polymorphism on the autosomes.  For this reason, the genomic location of the data is crucial and we can benefit from the complete genome sequence of a closely related species of macaque monkey, the rhesus macaque.  We will use a program called [`bwa`] (http://sourceforge.net/projects/bio-bwa/files) and also [`samtools`](http://samtools.sourceforge.net/), to map our data to individual chromosomes of the genome of a rhesus macaque (*Macaca mulatta*).  Normally one would map reads to an entire genome because the data were generated from a complete genome but in our case we are doing only an example analysis and we have to work within time constraints.
 
@@ -60,4 +60,4 @@ Make a `.bai` file:
 
 `./samtools index Individual_1_sorted.bam`
 
-## OK, if this all went smoothly we are now ready to make some genotype calls.  Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/Automating_alignment_with_a_bash_script.md) to go to the next page.
+## OK, if this all went smoothly we are now ready to make some genotype calls.  Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/5_Automating_alignment_with_a_bash_script.md) to go to the next page.
