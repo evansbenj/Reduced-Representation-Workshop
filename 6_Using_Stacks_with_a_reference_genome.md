@@ -47,7 +47,7 @@ PM592_sorted population_2
 PM602_sorted population_2
 ```
 
-Please type `Ctrl-X` and then `Ctrl-S` to save this file and exit emacs.  This file will be used to tell Stacks that the first five samples are from one population and the last four samples are from another population.
+Please type `Ctrl-X` and then `Ctrl-S` to save this file and then `Ctrl-X` and then `Ctrl-C` to exit emacs.  This file will be used to tell Stacks that the first five samples are from one population and the last four samples are from another population.
 
 One way to quantify population structure is using the F-statistic (F<sub>ST</sub>).  F<sub>ST</sub> is an index of population structure that ranges from zero (no population structure) to one (two populations are each fixed for different alleles.  Let's calulate F<sub>ST</sub> between the two populations specified avove using `Stacks`.  To do this, please type:
 
