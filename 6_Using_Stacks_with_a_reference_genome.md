@@ -36,14 +36,14 @@ Let's first examine whether population structure is present within our sample by
 and now enter this information:
 
 ```
-PF515 population_1 
-PM561 population_1                                                                                 
-PM565 population_1                                                                                    
-PM566 population_1                                                                       
-PM567 population_1                                                                                    
-PM582 population_2                                                                                    
-PM584 population_2                                                                                    
-PM592 population_2                                                                                    
+PF515 population_1
+PM561 population_1
+PM565 population_1
+PM566 population_1
+PM567 population_1
+PM582 population_2
+PM584 population_2
+PM592 population_2
 PM602 population_2
 ```
 
