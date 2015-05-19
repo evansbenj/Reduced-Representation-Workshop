@@ -49,7 +49,7 @@ PM602 population_2
 
 This file will be used to tell Stacks that the first five samples are from one population and the last four samples are from another population.
 
-One way to quantify population structure is using the F-statistic (F<sup>ST</sup>).
+One way to quantify population structure is using the F-statistic (F<sub>ST</sub>).
 
 ## Summary Statistics
 
