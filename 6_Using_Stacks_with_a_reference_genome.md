@@ -36,15 +36,15 @@ Let's first examine whether population structure is present within our sample by
 and now enter this information:
 
 ```
-PF515 population_1
-PM561 population_1
-PM565 population_1
-PM566 population_1
-PM567 population_1
-PM582 population_2
-PM584 population_2
-PM592 population_2
-PM602 population_2
+PF515_sorted population_1
+PM561_sorted population_1
+PM565_sorted population_1
+PM566_sorted population_1
+PM567_sorted population_1
+PM582_sorted population_2
+PM584_sorted population_2
+PM592_sorted population_2
+PM602_sorted population_2
 ```
 
 Please type `Ctrl-X` and then `Ctrl-S` to save this file and exit emacs.  This file will be used to tell Stacks that the first five samples are from one population and the last four samples are from another population.
