@@ -29,6 +29,12 @@ OK, now please make a new direcotry by typing this:
 
 ## Analysis of population structure
 
+Let's first examine whether population structure is present within our sample by defining two populations.  This can be done in `Stacks` by making a file called a `population map`.  Use emails to generate a file like this:
+
+`emacs population_map`
+
+
+
 ## Summary Statistics
 
 ## Whitelists and Blacklists
