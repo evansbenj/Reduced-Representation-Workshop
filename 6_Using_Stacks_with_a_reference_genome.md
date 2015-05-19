@@ -33,7 +33,20 @@ Let's first examine whether population structure is present within our sample by
 
 `emacs population_map`
 
+and now enter this information:
 
+```
+PM561 population_1                                                                                 
+PM565 population_1                                                                                    
+PM566 population_1                                                                       
+PM567 population_1                                                                                    
+PM582 population_2                                                                                    
+PM584 population_2                                                                                    
+PM592 population_2                                                                                    
+PM602 population_2
+```
+
+This file will be used to tell Stacks that the first four samples 
 
 ## Summary Statistics
 
