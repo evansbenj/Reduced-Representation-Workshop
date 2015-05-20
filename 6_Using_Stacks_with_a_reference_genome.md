@@ -51,7 +51,23 @@ Please type `Ctrl-X` and then `Ctrl-S` to save this file and then `Ctrl-X` and t
 
 One way to quantify population structure is using the F-statistic (F<sub>ST</sub>).  F<sub>ST</sub> is an index of population structure that ranges from zero (no population structure) to one (two populations are each fixed for different alleles.  Let's calulate F<sub>ST</sub> between the two populations specified avove using `Stacks`.  To do this, please type:
 
+```
+**Path_to_stacks***/stacks-1.30/scripts/ref_map.pl -S -b 1 -n 0 \
+	-O **Path_to_data***/population_map \
+	-o **Path_to_data***/Stacks_Results \
+   	-s **Path_to_data***/PF515_sorted.bam \
+    -s **Path_to_data***/PM561_sorted.bam \
+    -s **Path_to_data***/PM565_sorted.bam \
+    -s **Path_to_data***/PM566_sorted.bam \
+    -s **Path_to_data***/PM567_sorted.bam \
+    -s **Path_to_data***/PM582_sorted.bam \
+    -s **Path_to_data***/PM584_sorted.bam \
+    -s **Path_to_data***/PM592_sorted.bam \
+    -s **Path_to_data***/PM602_sorted.bam \
+   	-e **Path_to_stacks***/stacks-1.30/ -X "populations:--fstat" \
+```
 
+In this command, the backslashes `\` just indicate that the command is continued on the next line.  The program we are executing is a perl script caled "ref_map.pl".  Similar to the bash scripts we wrote earlier, this program just executes a bunch of other prorgams.  We can pass some of these programs additional commands using the `-X` flag.  Here we have used this flag at the end to pass the program `populations` a this flag: `--fstat`, which tells the program `populations` to calculate F<sub>ST</sub> using the population map that we specified using the `-O` flag.  We have additionally specified a directory to write our results to using teh `-o` flag.  The `-e` flag tells the computer where the executable files that are referenced by `ref_map.pl` are (these are programs such as `cstacks` and `populations`).
 
 ## Summary Statistics
 
