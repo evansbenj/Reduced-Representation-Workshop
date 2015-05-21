@@ -51,9 +51,9 @@ We will use software called `RADpools` to de-multiplex and trim our data.  This 
 
 The command to execute this program on our data is:
 
-`./RADpools -i **path_to_data**/data -d **path_to_barcode_file**/monkey.pools -o`
+`./RADpools -i **path_to_data**/data -d **path_to_barcode_file**/monkey.pools -s -o`
 
-The first part (`./RADpools`) directs the computer to run the program RADpools.  The `-i` flag specifies where the data are.  The `-d` flag specifies where the barcode file is that we made eariler.  The `-o` flag directs RADpools to output the trimmed data in fastq format.  When the program is done sorting the data, it should generate a directory called `monkey` in your current directory. (The name is just whatever the suffix is of your `.pools` file. This may take a little while to run so let's get it started now and then move on to the next step.  
+The first part (`./RADpools`) directs the computer to run the program RADpools.  The `-i` flag specifies where the data are.  The `-d` flag specifies where the barcode file is that we made eariler.  The `-s` flag tells RADpools that the data have Sanger quality scores.  The `-o` flag directs RADpools to output the trimmed data in fastq format.  When the program is done sorting the data, it should generate a directory called `monkey` in your current directory. (The name is just whatever the suffix is of your `.pools` file. This may take a little while to run so let's get it started now and then move on to the next step.  
 
 
 
