@@ -13,7 +13,9 @@ The portion of Stacks that we will use consists of three main steps:
   2. Across all individuals, generate a catalog of loci that is a comprehensive list of all genomic regions that have data from at least one individual.  This is accomplished with the `cstacks` program.
   3. Once a catelog of all loci is made, we can compile the data for all individuals to generate a multi-individual genotype for each locus.  This is done with the `sstacks` program
 
-These programs can be run in a batch using a `Perl` script that comes with the program called `refmap.pl`.  This script functions in a similar way to the bash scripts we have used already but it has some added features, such as allowing options to be specified using flags.
+Once loci are compiled within and across individuals, we can use the program `populations` within Stacks to analyze the data. We can also output the data in different formats that can be analyzed with other software such as [`Structure`](http://pritchardlab.stanford.edu/structure.html) and [`Phylip`](http://evolution.genetics.washington.edu/phylip/getme.html).   
+
+The pipeline of programs within `Stacks` can be run in a batch using a `Perl` script that comes with the program called `refmap.pl`.  This script functions in a similar way to the bash scripts we have used already but it has some added features, such as allowing options to be specified using flags.
 
 To get started, lets first make a directory within the `monkey` directory that has our data called `Stacks_Results`.  To do this, first make sure you are in the `monkey` directory by typing this:
 
@@ -47,7 +49,7 @@ PM592_sorted  population_2
 PM602_sorted  population_2
 ```
 
-Please type `Ctrl-X` and then `Ctrl-S` to save this file and then `Ctrl-X` and then `Ctrl-C` to exit emacs.  This file will be used to tell Stacks that the first five samples are from one population and the last four samples are from another population.
+Note that the term tab-delimited means that there is a tab between the columns of information.  Please type `Ctrl-X` and then `Ctrl-S` to save this file and then `Ctrl-X` and then `Ctrl-C` to exit emacs.  This file will be used to tell Stacks that the first five samples are from one population and the last four samples are from another population.
 
 One way to quantify population structure is using the F-statistic (F<sub>ST</sub>).  F<sub>ST</sub> is an index of population structure that ranges from zero (no population structure) to one (two populations are each fixed for different alleles.  Let's calulate F<sub>ST</sub> between the two populations specified avove using `Stacks`.  To do this, please type:
 
