@@ -73,9 +73,7 @@ In this command, the backslashes `\` just indicate that the command is continued
 
 If you now go to the `Stacks_Results` directory (`cd path_to_Stacks_Results_directory`) and list the files in this directory (`ls`) you should see a bunch of compressed files that have a `gz` suffix.  For each sample we have a file whose name includes the word `alleles`, one with `matches`, one with `snps`, and one with `tags`.  Some details of the contents of these files is available in the [Stacks manual](http://creskolab.uoregon.edu/stacks/manual/).  
 
-## Summary Statistics
+## Other Summary Statistics
 
 ## Whitelists and Blacklists
-
-## Other information
 
