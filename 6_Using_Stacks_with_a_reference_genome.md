@@ -71,9 +71,37 @@ One way to quantify population structure is using the F-statistic (F<sub>ST</sub
 
 In this command, the backslashes `\` just indicate that the command is continued on the next line.  The program we are executing is a perl script caled "ref_map.pl".  Similar to the bash scripts we wrote earlier, this program just executes a bunch of other prorgams.  We can pass some of these programs additional commands using the `-X` flag.  Here we have used this flag at the end to pass the program `populations` a this flag: `--fstat`, which tells the program `populations` to calculate F<sub>ST</sub> using the population map that we specified using the `-O` flag.  We have additionally specified a directory to write our results to using teh `-o` flag.  The `-e` flag tells the computer where the executable files that are referenced by `ref_map.pl` are (these are programs such as `cstacks` and `populations`).
 
-If you now go to the `Stacks_Results` directory (`cd path_to_Stacks_Results_directory`) and list the files in this directory (`ls`) you should see a bunch of compressed files that have a `gz` suffix.  For each sample we have a file whose name includes the word `alleles`, one with `matches`, one with `snps`, and one with `tags`.  Some details of the contents of these files is available in the [Stacks manual](http://creskolab.uoregon.edu/stacks/manual/).  
+If you now go to the `Stacks_Results` directory (`cd path_to_Stacks_Results_directory`) and list the files in this directory (`ls`) you should see a bunch of compressed files that have a `gz` suffix.  For each sample we have a file whose name includes the word `alleles`, one with `matches`, one with `snps`, and one with `tags`.  Some details of the contents of these files is available in the [Stacks manual](http://creskolab.uoregon.edu/stacks/manual/).  The file called `batch_1.fst_population_1-population_2.tsv` has the results of the F<sub>ST</sub> calculation we requested from the module `populations`.  We can look at this by typing:
 
-## Other Summary Statistics
+`more batch_1.fst_population_1-population_2.tsv`
 
-## Whitelists and Blacklists
+## Using individual modules within Stacks
+
+Now lets try to do some more stuff using the `populations` module of stacks.  For example, we can output a file that can be analyzed with the program `Structure` to give us an idea about whether or not our sample has population structure.  To accomplish this, lets work with a larger dataset that I made earlier.  Please switch to this directory:
+
+`cd **insert_directory_with_complete_data_here***`
+
+Let's first uncompress one of the results file like this:
+
+`gunxip batch_1.catalog.tags.tsv.gz`
+
+and then look at the compressed file like this:
+
+`more batch_1.catalog.tags.tsv`
+
+The first line begins with a hash (`#`) symbol and is reserved for comments.  The next lines have columns of text.  The 4th column lists the chromosome number and position of each tag.  We are going to generate a file in which we sample random SNPs from 1000 tags but we want to exclude data from the X chromosome because there are differences in copy number between males and females (i.e. two in XX females and one in XY males).  In order to do this, we can create a `blacklist` of tags to exclude, which is just a list of the numbers in the 3rd column that correspond with the `chrX` in the 4th column.  To generate a `blacklist` based on this criterion, please use this `unix` command:
+
+`awk '$4 ~ /chrX/ {print $3}' batch_1.catalog.tags.tsv > chrX_blacklist`
+
+This uses a `unix` function called `awk`.  It basically says to print the number in column 3 to a file called `chrX_blacklist` whenever the number in column 4 is equal to `chrX`.
+
+We can view this file by typing:
+
+`more chrX_blacklist`
+
+
+
+
+
+
 
