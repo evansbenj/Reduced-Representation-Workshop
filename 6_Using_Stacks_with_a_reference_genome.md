@@ -111,6 +111,14 @@ Now we are ready to generate an input file for `Structure`.  Please type this:
 
 This command directs the `populations` module of `Stacks` to reute results to a directory specified by the `-P` flag.  It tells `populations` to output a single snp (the `--write_single_snp` flag) from tags specified by the `1000_randoms` file (the `-W` tag) but not to include any snps from chromosome X (the `-B` flag).  The `-r` flag says we want to only print data where 100% of the individuals have a genotype.  The `-b` and `-t` flags specify, respectively, that `populations` should focus on batch_ID number 1 (you can work with special IDs if you need to but this is beyond the scope of this workshop) and that `populations` should use 36 threads to do the calculations.
 
+This will generate a file called `batch_1.structure.tsv` which can be used as an input file for the program `Structure`.
+
+## Running `Structure`
+
+`Structure` is a software that attempts to assign individuals to *k* populations in such a way as to minimize Hardy-Weinberg and linkage disequilibrium.  We run structure by specifying multiple values of *k* and then seeing which value(s) maximuze the likelihood of the data given the model of population structure.
+
+
+
 
 
 
