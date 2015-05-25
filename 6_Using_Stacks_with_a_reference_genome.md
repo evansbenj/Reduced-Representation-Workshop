@@ -93,7 +93,7 @@ The first line begins with a hash (`#`) symbol and is reserved for comments.  Th
 
 `awk '$4 ~ /chrX/ {print $3}' batch_1.catalog.tags.tsv > chrX_blacklist`
 
-This uses a `unix` function called `awk`.  It says to print the number in column 3 to a file called `chrX_blacklist` whenever the number in column 4 is equal to `chrX`.
+This uses a `unix` function called `awk`.  It says to print the number in column 3 to a file called `chrX_blacklist` whenever the value in column 4 is equal to `chrX`.
 
 We can view this file by typing:
 
