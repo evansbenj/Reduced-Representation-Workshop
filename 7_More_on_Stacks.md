@@ -14,7 +14,7 @@ and then look at the compressed file like this:
 
 `more batch_1.catalog.tags.tsv`
 
-The first line begins with a hash (`#`) symbol and is reserved for comments.  The next lines have columns of text.  The 4th column lists the chromosome number and position of each tag.  We are going to generate a file in which we sample random SNPs from 1000 tags but we want to exclude data from the X chromosome because there are differences in copy number between males and females (i.e. two in XX females and one in XY males).  In order to do this, we can create a `blacklist` of tags to exclude, which is just a list of the numbers in the 3rd column that correspond with the `chrX` in the 4th column.  To generate a `blacklist` based on this criterion, please use this `unix` command:
+The first line begins with a hash (`#`) symbol and is reserved for comments.  The next lines have columns of text.  The 4th column lists the chromosome number and position of each tag.  We are going to generate a file in which we sample random SNPs from 1000 tags but we want to exclude data from the X chromosome because there are differences in copy number between males and females (i.e. two in XX females and one in XY males).  In order to do this, we can create a list of tags to include (a `whitelist`) or exclude (a `blacklist`), which is just a list of the numbers in the 3rd column that correspond with the `chrX` in the 4th column.  To generate a list based on this criterion, please use this `unix` command:
 
 `awk '$4 ~ /chrX/ {print $3}' batch_1.catalog.tags.tsv > chrX_blacklist`
 
@@ -23,6 +23,12 @@ This uses a `unix` function called `awk`.  It says to print the number in column
 We can view this file by typing:
 
 `more chrX_blacklist`
+
+
+
+## Running `Structure`
+
+`Structure` is a software that attempts to assign individuals to *k* populations in such a way as to minimize Hardy-Weinberg and linkage disequilibrium.  We run structure by specifying multiple values of *k* and then seeing which value(s) maximuze the likelihood of the data given the model of population structure. We can output a file that can be analyzed with the program `Structure` to give us an idea about whether or not our sample has population structure. 
 
 The program `Structure` can not handle all of our data, so let's select 1000 loci randomly to analyze like this:
 
@@ -37,9 +43,3 @@ Now we are ready to generate an input file for `Structure`.  Please type this:
 This command directs the `populations` module of `Stacks` to reute results to a directory specified by the `-P` flag.  It tells `populations` to output a single snp (the `--write_single_snp` flag) from tags specified by the `1000_randoms` file (the `-W` tag) but not to include any snps from chromosome X (the `-B` flag).  The `-r` flag says we want to only print data where 100% of the individuals have a genotype.  The `-b` and `-t` flags specify, respectively, that `populations` should focus on batch_ID number 1 (you can work with special IDs if you need to but this is beyond the scope of this workshop) and that `populations` should use 36 threads to do the calculations.
 
 This will generate a file called `batch_1.structure.tsv` which can be used as an input file for the program `Structure`.
-
-## Running `Structure`
-
-`Structure` is a software that attempts to assign individuals to *k* populations in such a way as to minimize Hardy-Weinberg and linkage disequilibrium.  We run structure by specifying multiple values of *k* and then seeing which value(s) maximuze the likelihood of the data given the model of population structure. We can output a file that can be analyzed with the program `Structure` to give us an idea about whether or not our sample has population structure. 
-
-
