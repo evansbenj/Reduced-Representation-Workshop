@@ -1,6 +1,6 @@
 # More on Stacks:  Whitelists, blacklists, using individual modules, and summary statistics
 
-Or you can go back to Using Stacks.
+(Or you can go back to [Using Stacks with a Reference Genome](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/6_Using_Stacks_with_a_reference_genome.md).
 
 Now lets try to do some more stuff using the `populations` module of stacks.  For example, we can output a file that can be analyzed with the program `Structure` to give us an idea about whether or not our sample has population structure.  To accomplish this, lets work with a larger dataset that I made earlier.  Please switch to this directory:
 
