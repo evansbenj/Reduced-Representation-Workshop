@@ -1,8 +1,8 @@
 # More on Stacks:  Whitelists, blacklists, using individual modules, and summary statistics
 
-(Or you can go back to [Using Stacks with a Reference Genome](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/6_Using_Stacks_with_a_reference_genome.md).
+(Or you can go back to [Using Stacks with a Reference Genome](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/6_Using_Stacks_with_a_reference_genome.md)).
 
-Now lets try to do some more stuff using the `populations` module of stacks.  For example, we can output a file that can be analyzed with the program `Structure` to give us an idea about whether or not our sample has population structure.  To accomplish this, lets work with a larger dataset that I made earlier.  Please switch to this directory:
+Now lets try to calculate summary statistics from specific genomic regions using the `populations` module of stacks. To accomplish this, lets work with a larger dataset that I made earlier.  Please switch to this directory:
 
 `cd **insert_directory_with_complete_data_here***`
 
@@ -40,6 +40,6 @@ This will generate a file called `batch_1.structure.tsv` which can be used as an
 
 ## Running `Structure`
 
-`Structure` is a software that attempts to assign individuals to *k* populations in such a way as to minimize Hardy-Weinberg and linkage disequilibrium.  We run structure by specifying multiple values of *k* and then seeing which value(s) maximuze the likelihood of the data given the model of population structure.
+`Structure` is a software that attempts to assign individuals to *k* populations in such a way as to minimize Hardy-Weinberg and linkage disequilibrium.  We run structure by specifying multiple values of *k* and then seeing which value(s) maximuze the likelihood of the data given the model of population structure. We can output a file that can be analyzed with the program `Structure` to give us an idea about whether or not our sample has population structure. 
 
 
