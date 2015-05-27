@@ -6,7 +6,7 @@
 
 The program `Structure` can not handle all of our data, so let's select 1000 loci randomly to analyze like this:
 
-'shuf -n 1000 batch_1.catalog.tags.tsv | awk '{print $3}'  > 1000_randoms'
+`shuf -n 1000 batch_1.catalog.tags.tsv | awk '{print $3}'  > 1000_randoms`
 
 This uses another `unix` command called `shuf`.  This says to print a randomly selected value from column 3 1000 times to a file called `1000_randoms`.
 
