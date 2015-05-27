@@ -18,6 +18,8 @@ This command directs the `populations` module of `Stacks` to output a single snp
 
 This will generate a file called `batch_1.structure.tsv` which can be used as an input file for the program `Structure`.
 
+## Running Structure
+
 Before we can run `Structure` with out data, we have some clerical issues to take care of.  Firstly, lets delete the first row from our input file  - this row has a comment that we don't need.  Please type this:
 
 `tail -n+2 batch_1.structure.tsv > simple_structure.tsv`
