@@ -2,7 +2,7 @@
 
 (Or you can go back to using `Stacks` to calculate summary statistics [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/7_More_on_Stacks.md)).
 
-`Structure` is a software that attempts to assign individuals to *k* populations in such a way as to minimize Hardy-Weinberg and linkage disequilibrium.  We run structure by specifying multiple values of *k* and then seeing which value(s) maximuze the likelihood of the data given the model of population structure. We can output a file that can be analyzed with the program `Structure` to give us an idea about whether or not our sample has population structure. 
+[`Structure`](http://pritchardlab.stanford.edu/structure_software/release_versions/v2.3.4/html/structure.html) is a software that attempts to assign individuals to *k* populations in such a way as to minimize Hardy-Weinberg and linkage disequilibrium.  We run `Structure` by specifying multiple values of *k* and then seeing which value(s) maximuze the likelihood of the data given the model of population structure. We can generate an input file for this program using `Stacks`. 
 
 The program `Structure` can not handle all of our data, so let's select 1000 loci randomly to analyze like this:
 
@@ -17,3 +17,23 @@ Now we are ready to generate an input file for `Structure`.  Please type this:
 This command directs the `populations` module of `Stacks` to output a single snp (the `--write_single_snp` flag) from tags specified by the `1000_randoms` file (the `-W` tag) but not to include any snps from chromosome X (the `-B` flag).  
 
 This will generate a file called `batch_1.structure.tsv` which can be used as an input file for the program `Structure`.
+
+Before we can run `Structure` with out data, we have some clerical issues to take care of.  Firstly, lets delete the first row from our input file  - this row has a comment that we don't need.  Please type this:
+
+`tail -n+2 batch_1.structure.tsv > simple_structure.tsv`
+
+This uses the Unix command `tail` to feed all lines beginning with the second line to a new file called `simple_structure.tsv`.
+
+Because we required that there be no missing data from the SNPs in our analysis, we can get a differing number of SNPs in our input file depending on which sites were randomly chosen. So we need to count how many columns we have in this file.  Please type this:
+
+`head -n1 simple_structure.tsv |  sed 's/\t/\n/g' | wc -l`
+
+This should output the number of tab spaces in the first column of the file `simple_structure.tsv`.  Because the first column begins with a tab space, the actual number of loci is equal to this number **minus one**.
+
+Now we are ready to run `Structure`.  Please type this command:
+
+`/work/ben/workshop_software/console/structure -m /work/ben/workshop_software/console/mainparams -e /work/ben/workshop_software/console/extraparams -K 3 -L 279 -N 9 -i simple_structure.tsv -o output_K_3`
+
+This tells the system to execute the `Structure` program and it specifies the paths to two files (`mainparams` and `extraparams`) that are used in the analysis.  It then has flags for the number of populations (`-K`), the number of loci (`-L`; based on the number we got above from the `head` command), the number of individuals (`-N`; our study has 9 individuals), the input file (`-i`) and an output file (`-o`).
+
+ 
