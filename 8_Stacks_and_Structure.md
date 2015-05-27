@@ -36,4 +36,25 @@ Now we are ready to run `Structure`.  Please type this command:
 
 This tells the system to execute the `Structure` program and it specifies the paths to two files (`mainparams` and `extraparams`) that are used in the analysis.  It then has flags for the number of populations (`-K`), the number of loci (`-L`; based on the number we got above from the `head` command), the number of individuals (`-N`; our study has 9 individuals), the input file (`-i`) and an output file (`-o`).
 
+ Assuming the command executes without error, you can check out the results in the file `output_K_3` like this:
  
+ `more output_K_3`
+ 
+ You could scroll down to the population assignments, which should look something like this:
+ ```
+ Inferred ancestry of individuals:
+        Label (%Miss) Pop:  Inferred clusters
+  1 PF515_sorte    (0)    1 :  0.687 0.150 0.164 
+  2 PM561_sorte    (0)    1 :  0.583 0.194 0.222 
+  3 PM565_sorte    (0)    1 :  0.635 0.198 0.167 
+  4 PM566_sorte    (0)    1 :  0.665 0.171 0.164 
+  5 PM567_sorte    (0)    1 :  0.591 0.205 0.204 
+  6 PM582_sorte    (0)    1 :  0.674 0.149 0.177 
+  7 PM584_sorte    (0)    1 :  0.613 0.184 0.203 
+  8 PM592_sorte    (0)    1 :  0.591 0.200 0.209 
+  9 PM602_sorte    (0)    1 :  0.521 0.226 0.253 
+```
+
+This tells us, for each individual, what the probability that that individual is assigned to each one of *k* populations (three in this case).
+
+
