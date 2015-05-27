@@ -73,7 +73,7 @@ and make a barplot
 
 `>` `barplot(as.matrix(t(dat[,6:8])))`
 
-and now exit
+and now exit the `R` environment:
 
 `>` `q()`
 
