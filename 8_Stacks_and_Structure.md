@@ -57,6 +57,8 @@ This tells the system to execute the `Structure` program and it specifies the pa
 
 This tells us, for each individual, what the probability that that individual is assigned to each one of *k* populations (three in this case).
 
+## A quick example of plotting with `R`
+
 We can plot this by making a file and pasting these data in this file:
 
 `emacs assignments`
@@ -72,6 +74,8 @@ and make a pdf..
 and make a barplot
 
 `>` `barplot(as.matrix(t(dat[,6:8])))`
+
+This command tells R to make a boxplot using columns 6 thru 8 of the table called `dat`.  We have transformed these data for this plot using `t()`.
 
 and now exit the `R` environment:
 
