@@ -4,7 +4,7 @@
 
 ## Whitelists, Blacklists, and Calculating Summary Statistics with `Populations`
 
-Now lets try to calculate summary statistics from specific genomic regions using the `populations` module of stacks. To accomplish this, lets work with a larger dataset that I made earlier.  Please switch to this directory:
+Now lets try to calculate a summary statistic from specific genomic regions using the `populations` module of stacks. To accomplish this, lets work with a larger dataset that I made earlier.  Please switch to this directory:
 
 `cd **insert_directory_with_complete_data_here***`
 
@@ -32,9 +32,12 @@ Now, if we want to calculate pairwise nucleotide diversity on the autosomes, we 
 
 This command directs the `populations` module of `Stacks` to write results to a directory specified by the `-P` flag. The `-r` flag says we want to only print data where 100% of the individuals have a genotype.  The `-b` and `-t` flags specify, respectively, that `populations` should focus on batch_ID number 1 (you can work with special IDs if you need to but this is beyond the scope of this workshop) and that `populations` should use 36 threads to do the calculations.  The calculations will include all positions except those on the X chromosome, which is blacklisted by the `-B` flag.
 
-We can view the pairwise nucleotide diversity statistic in a file called `batch_1.sumstats_summary.tsv`.
+We can view the pairwise nucleotide diversity statistic (Pi) in a file called `batch_1.sumstats_summary.tsv`.
 
-Similarly, if we want to calculate pairwise nucleotide diversity on only the X chromosome, we can use the `chrX_list` as a `whitelist` as follows:
+Similarly, if we want to calculate Pi on only the X chromosome, we can use the `chrX_list` as a `whitelist` as follows:
 
 `/work/ben/workshop_software/stacks-1.30/populations -P /work/ben/2015_workshop/complete_data/monkey/Stacks_Results -b 1 -r 1 -t 36 -W chrX_list`
 
+There are problems with this calculation using only the X chromosome because some of the individuals are males; Ben will discuss these problems and a workaround.
+
+# Now let's use `Stacks` to make a `Structure` input file here.
