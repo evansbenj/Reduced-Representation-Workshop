@@ -28,6 +28,8 @@ Now, if we want to calculate pairwise nucleotide diversity on the autosomes, we 
 
 `/work/ben/workshop_software/stacks-1.30/populations -P /work/ben/2015_workshop/complete_data/monkey/Stacks_Results -b 1 -r 1 -t 36 -B chrX_list`
 
+We can view the pairwise nucleotide diversity statistic in a file called `batch_1.sumstats_summary.tsv`.
+
 Similarly, if we want to calculate pairwise nucleotide diversity on only the X chromosome, we can use the `chrX_list` as a `whitelist` as follows:
 
 `/work/ben/workshop_software/stacks-1.30/populations -P /work/ben/2015_workshop/complete_data/monkey/Stacks_Results -b 1 -r 1 -t 36 --structure --write_single_snp -W ./1000_randoms -W chrX_list`
