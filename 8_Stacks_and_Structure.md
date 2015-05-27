@@ -57,4 +57,24 @@ This tells the system to execute the `Structure` program and it specifies the pa
 
 This tells us, for each individual, what the probability that that individual is assigned to each one of *k* populations (three in this case).
 
+We can plot this by making a file and pasting these data in this file:
+
+`emacs assignments`
+
+If you now paste the data beginning with the line `1 PF515_sorte...` and save it (`Ctrl-X` and then `Ctrl-S`) and exit (`Ctrl-X` and then `Ctrl-C`) we can easily plot the data with R.  To do this type: `R`.  This should open up the `R` environment.  Now import the data:
+
+`>` `dat<-read.table(file="assignments")`
+
+and make a pdf..
+
+`>`  `pdf("temp.pdf")`
+
+and make a barplot
+
+`>` `barplot(as.matrix(t(dat[,6:8])))`
+
+and now exit
+
+`>` `q()`
+
 
