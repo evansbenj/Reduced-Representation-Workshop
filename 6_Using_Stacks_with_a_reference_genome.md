@@ -75,7 +75,7 @@ If you now go to the `Stacks_Results` directory (`cd path_to_Stacks_Results_dire
 
 `more batch_1.fst_population_1-population_2.tsv`
 
-## Now let's move on to [learn more about Stacks](https://github.com/evansbenj/Reduced-Representation-Workshop/edit/master/7_More_on_Stacks.md).
+## Now let's move on to [learn more about Stacks](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/7_More_on_Stacks.md).
 
 
 
