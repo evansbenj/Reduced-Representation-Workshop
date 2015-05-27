@@ -40,4 +40,4 @@ Similarly, if we want to calculate Pi on only the X chromosome, we can use the `
 
 There are problems with this calculation using only the X chromosome because some of the individuals are males; Ben will discuss these problems and a workaround.
 
-# Now let's use `Stacks` to make a `Structure` input file here.
+# Now let's use `Stacks` to make a `Structure` input file [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/8_Stacks_and_Structure.md).
