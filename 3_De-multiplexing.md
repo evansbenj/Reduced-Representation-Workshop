@@ -15,13 +15,12 @@ ATGCGCGCGCTAGGCTCGCGATCGGGGAGCGCGAGCTGAGCTAGCGCGATGCGCCCCGAC
 
 The format of `fastq` files is similar to `fasta` except that quality scores are included.  Each sequence has four lines (instead of two for `fasta` files).  The first begins with `@` followed by information about the sequence.  The second line is the nucleotide sequence. The third line is a `+` which may be followed by the same information that followed the `@` sign in the first line.  The fourth line is the quality values.  For the Illumina data we will be working with, these values range from 0–41 and are represented by single characters.  More details about fastq format is available [here](http://en.wikipedia.org/wiki/FASTQ_format).  Here is an example of a sequence in fastq format:
 
-`@HWI-ST724:202:D127MACXX:6:2114:13665:74490`
-
-`TGCAGGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGAAATTTTTGGGCACAAAGAACCACAGAAAAAAAATGAAAA`
-
-`+HWI-ST724:202:D127MACXX:6:2114:13665:74490`
-
-`AFHJJJFIJJJJIJJJJJHFDDDDDB0530&0)00&)0&05007BDD############################################`
+```
+@HWI-ST724:202:D127MACXX:6:2114:13665:74490
+TGCAGGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGAAATTTTTGGGCACAAAGAACCACAGAAAAAAAATGAAAA
++HWI-ST724:202:D127MACXX:6:2114:13665:74490
+AFHJJJFIJJJJIJJJJJHFDDDDDB0530&0)00&)0&05007BDD############################################
+```
 
 In this sequence the number signs indicate low quality reads at the end (right side) of the sequence.
 
