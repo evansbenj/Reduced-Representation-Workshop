@@ -2,7 +2,7 @@
 
 (or you can go back to the Basic Unix page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/2_BasicUnix.md)).
 
-Most RRGS methods rely on the Illumina sequencing platform.  These machines generate data using something called a "flowcell" that is divided up into eight "lanes".  Small scale projects typically would run multiple samples (from different species or different individuals within a species) on one lane.  The data that is output from Illumina sequencers generally is in a format called `fastq`.
+Most RRGS methods rely on the Illumina sequencing platform.  These machines generate data using something called a "flowcell" that is divided up into eight "lanes".  Small scale projects typically would run multiple samples (from different species or different individuals within a species) on one lane.  
 
 ## Fasta and Fastq format
 
