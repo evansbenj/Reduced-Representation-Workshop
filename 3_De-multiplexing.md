@@ -2,24 +2,7 @@
 
 (or you can go back to the Basic Unix page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/2_BasicUnix.md)).
 
-Most RRGS methods rely on the Illumina sequencing platform.  These machines generate data using something called a "flowcell" that is divided up into eight "lanes".  Small scale projects typically would run multiple samples (from different species or different individuals within a species) on one lane.  
-
-A first step in our analysis pipeline is to organize data from each of our samples that were run together on an Illumina lane (De-multiplexing our data) and also to filter our data and trim off bits that have lots of errors or that have sequences from the laboratory procedures that were used to generate the data (Trimming/Quality control).
-
-## De-Multiplexing
-When samples are run on an Illumina machine, DNA is broken up into many small fragments and a small bit of DNA called an adaptor is then added on each of the fragments. This adaptor allows the sequencing process to occur, essentially by making possible high-throughput put polymerase chain reaction (ask Ben about this if you are unfamiliar). To make possible the multiplexing of samples on one Illumina lane, each sample is linked to a unique adaptor that contains a "barcode" sequence that allows us to sort out which samples each sequence came from.  For our dataset, we have nine individuals from one species (the Tonkean macaque). Each of the samples received the following barcodes (the sample name is followed by the barcode):
-```
-PF515 CCTCTTATCA
-PM561 TATCGTTAGT
-PM565 TAGTGCGGTC
-PM566 GGCCGGTAAC
-PM567 AGGAACCTCG
-PM582 TTATCCGTAG
-PM584 CGCTATACGG
-PM592 CACGCAACGA
-PM602 ATCCGTCTAC
-```
-We will use this information in a moment to de-multiplex our data.  Lets use emacs to make a text file that contains this information.  Please type `emacs monkey.pools` to generate a file called `monkey.pools`.  Now copy and paste the information above to your emacs window.  Then type `Ctrl-X` and `Ctrl-S` to save it and then `Ctrl-X` and `Ctrl-C` to close the program.
+Most RRGS methods rely on the Illumina sequencing platform.  These machines generate data using something called a "flowcell" that is divided up into eight "lanes".  Small scale projects typically would run multiple samples (from different species or different individuals within a species) on one lane.  The data that is output from Illumina sequencers generally is in a format called `fastq`.
 
 ## Fasta and Fastq format
 
@@ -40,6 +23,25 @@ The format of `fastq` files is similar to `fasta` except that quality scores are
 `AFHJJJFIJJJJIJJJJJHFDDDDDB0530&0)00&)0&05007BDD############################################`
 
 In this sequence the number signs indicate low quality reads at the end (right side) of the sequence.
+
+## De-Multiplexing
+
+A first step in our analysis pipeline is to organize data from each of our samples that were run together on an Illumina lane (De-multiplexing our data) and also to filter our data and trim off bits that have lots of errors or that have sequences from the laboratory procedures that were used to generate the data (Trimming/Quality control).
+
+When samples are run on an Illumina machine, DNA is broken up into many small fragments and a small bit of DNA called an adaptor is then added on each of the fragments. This adaptor allows the sequencing process to occur, essentially by making possible high-throughput put polymerase chain reaction (ask Ben about this if you are unfamiliar). To make possible the multiplexing of samples on one Illumina lane, each sample is linked to a unique adaptor that contains a "barcode" sequence that allows us to sort out which samples each sequence came from.  For our dataset, we have nine individuals from one species (the Tonkean macaque). Each of the samples received the following barcodes (the sample name is followed by the barcode):
+```
+PF515 CCTCTTATCA
+PM561 TATCGTTAGT
+PM565 TAGTGCGGTC
+PM566 GGCCGGTAAC
+PM567 AGGAACCTCG
+PM582 TTATCCGTAG
+PM584 CGCTATACGG
+PM592 CACGCAACGA
+PM602 ATCCGTCTAC
+```
+We will use this information in a moment to de-multiplex our data.  Lets use emacs to make a text file that contains this information.  Please type `emacs monkey.pools` to generate a file called `monkey.pools`.  Now copy and paste the information above to your emacs window.  Then type `Ctrl-X` and `Ctrl-S` to save it and then `Ctrl-X` and `Ctrl-C` to close the program.
+
 
 ## Quality control and trimming
 
