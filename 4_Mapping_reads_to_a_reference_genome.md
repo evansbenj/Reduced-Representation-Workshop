@@ -38,13 +38,11 @@ Now we can align the data from each individual to the reference genome using `bw
 
 `./bwa aln reference_genome individual_1.fastq > individual_1.sai`
 
-Add a header and generate `.sam` files
-
-The format for this command is:
+Now we need to generate a `.sam` formatted file from our `.sai` files.  The format for this command is:
 
 `bwa samse reference_genome individual_1.sai individual_1.fq > individual_1.sam`
 
-We also need to add a header to the file so you can try thiis
+We also need to add a header to each `.sam` file, so we can type this command:
 
 `./bwa samse -r "@RG\tID:FLOWCELL1.LANE6\tSM:Individual_1\tPL:illumina" reference.fa Individual_1.sai Individual_1.fastq > Individual_1.sam`
 
