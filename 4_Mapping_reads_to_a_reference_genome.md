@@ -38,7 +38,7 @@ Now we can align the data from each individual to the reference genome using `bw
 
 `./bwa aln reference_genome individual_1.fastq > individual_1.sai`
 
-Now we need to generate a `.sam` formatted file from our `.sai` files.  The format for this command is:
+This command generates an intermediate file with the `.sai` suffix (which stands for `suffix array index`. Now we need to generate a `.sam` formatted file from our `.sai` files.  A `.sam` file is a tab delimited text file that contains the alignment data.  The format for this command is:
 
 `bwa samse reference_genome individual_1.sai individual_1.fq > individual_1.sam`
 
@@ -46,7 +46,7 @@ We also need to add a header to each `.sam` file, so we can type this command:
 
 `./bwa samse -r "@RG\tID:FLOWCELL1.LANE6\tSM:Individual_1\tPL:illumina" reference.fa Individual_1.sai Individual_1.fastq > Individual_1.sam`
 
-Now generate a `.bam` file:
+Now we can generate a `.bam` file.  A `.bam` formatted file is a binary version of the `.sam` file.
 
 `./samtools view -bt reference_genome -o Individual_1.bam Individual_1.sam`
 
