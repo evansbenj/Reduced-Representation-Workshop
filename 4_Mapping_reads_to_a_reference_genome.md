@@ -38,7 +38,7 @@ Now we can align the data from each individual to the reference genome using `bw
 
 `./bwa aln reference_genome individual_1.fastq > individual_1.sai`
 
-This command generates an intermediate file with the `.sai` suffix (which stands for `suffix array index`. Now we need to generate a `.sam` formatted file from our `.sai` files.  A `.sam` file is a tab delimited text file that contains the alignment data.  The format for this command is:
+This command generates an intermediate file with the `.sai` suffix (which stands for `suffix array index`). Now we need to generate a `.sam` formatted file from our `.sai` files.  A `.sam` file is a tab delimited text file that contains the alignment data.  The format for this command is:
 
 `bwa samse reference_genome individual_1.sai individual_1.fq > individual_1.sam`
 
