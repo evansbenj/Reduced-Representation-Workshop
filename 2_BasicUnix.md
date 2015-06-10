@@ -60,7 +60,19 @@ If you need to rename a file you can type this:
 
 Here `mv` is short for "move".
 
-## Using `screen` in Unix (We can skip this section because we will be running jobs using a quequing system, but it is useful for some Unix systems that don't have a quequing system)
+If you would like to copy a file from the server to your local computer, you can use the `scp` command.  I usually open a separate window for this and then type:
+
+`scp username@server_address:path_to_file/file path_to_destination_where_I_want_the_file`
+
+For example, if we wanted to save the datafile we will use from the server to our local machine, we could type this:
+
+`scp username@caf-hpc1.sun.ac.za:/home/datasets/2015_Ben_Evans/data/forward_subset.fastq .`
+
+Note that a colon `:` separates the server address from the path on the server.  Also a space separates the source file name from the destination path.
+
+## Using `screen` in Unix 
+
+**(We can skip this section because we will be running jobs using a quequing system, but it is useful for some Unix systems that don't have a quequing system)**
 
 The `screen` command allows you to execute a job on a server and then log out.  This is useful for our purposes because RRGS generates large datasets that sometimes take a while to analyze.  We generally do data processing on a server (and not on your desktop computer), and we don't want to have to sit and watch our computer for hours or days while a program runs.  Like all commands in Unix, you can look at the manual for a command by typing `man` and then the command.  So, please type this:
 
