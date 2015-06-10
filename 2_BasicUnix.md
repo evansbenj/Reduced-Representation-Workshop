@@ -16,7 +16,7 @@ Where `username` is your username.  You will be prompted for a password. Then, t
 
 and then hit `return`.  
 
-This command (short for "print working direcotry" should print out the home directory.  You should see something like this:
+This command (short for "print working directory") should print out the home directory.  You should see something like this:
 
 `/home/username`
 
@@ -44,9 +44,15 @@ Sometimes we need to see what is inside a file. For text files you can use the m
 
 `more ` **filename**.
 
-where **filename** is the full name (including the suffix) of a file you can see in this directory.  You can use the spacebar to scroll down or type `q` to return to the prompt.  If you happen to want to look at a compressed file that has the suffix `.gz`, you can type this:
+where **filename** is the full name (including the suffix) of a file you can see in this directory.  For example you could look at the datafile we will work with by typing this:
+
+`more forward_subset.fastq`
+
+You can use the spacebar to scroll down or type `q` to return to the prompt.  Later, if you happen to want to look at a compressed file that has the suffix `.gz`, you can type this:
 
 `zmore ` **filename**.
+
+This current directory doesn't have any compressed files, but we will use this command later.
 
 If you need to rename a file you can type this:
 
@@ -54,7 +60,7 @@ If you need to rename a file you can type this:
 
 Here `mv` is short for "move".
 
-## Using `screen` in Unix
+## Using `screen` in Unix (We can skip this section because we will be running jobs using a quequing system, but it is useful for some Unix systems that don't have a quequing system)
 
 The `screen` command allows you to execute a job on a server and then log out.  This is useful for our purposes because RRGS generates large datasets that sometimes take a while to analyze.  We generally do data processing on a server (and not on your desktop computer), and we don't want to have to sit and watch our computer for hours or days while a program runs.  Like all commands in Unix, you can look at the manual for a command by typing `man` and then the command.  So, please type this:
 
