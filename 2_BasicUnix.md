@@ -14,17 +14,19 @@ Where `username` is your username.  You will be prompted for a password. Then, t
 
 `pwd`
 
-and then hit `return`.
+and then hit `return`.  
 
-This command (short for "print working direcotry" should print out the home directory.  Each forwardslash divides the name of a directory; the directories listed on the right side are inside the ones that are on the left.
+This command (short for "print working direcotry" should print out the home directory.  You should see something like this:
 
-To move to a different directory you can use the change directory command:
+`/home/username`
+
+Each forwardslash divides the name of a directory; the directories listed on the right side are inside the ones that are on the left.  To move to a different directory you can use the change directory command:
 
 `cd`
 
 followed by the path (the directory structure) that you want to go to.  Let's go to the directory that contains the RADseq dataset.  Please type this:
 
-`cd` **(add the path here)**
+`cd /home/datasets/2015_Ben_Evans/data` 
 
 Now let see what is in this directory.  Please type this:
 
