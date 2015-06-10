@@ -6,11 +6,11 @@ All of the software in this workshop is available for free and runs on a Unix op
 
 ## Some Unix Basics
 
-To connect to the Unix system we are using, do this **(to be edited later)**:
+To connect to the Unix system we are using, please type this:
 
-`ssh XXXX`
+`ssh username@caf-hpc1.sun.ac.za`
 
-To see what directory you are in, type this:
+Where `username` is your username.  You will be prompted for a password. Then, to see what directory you are in, type this:
 
 `pwd`
 
