@@ -26,7 +26,9 @@ In this sequence the number signs indicate low quality reads at the end (right s
 
 ## De-Multiplexing
 
-A first step in our analysis pipeline is to organize data from each of our samples that were run together on an Illumina lane (De-multiplexing our data) and also to filter our data and trim off bits that have lots of errors or that have sequences from the laboratory procedures that were used to generate the data (Trimming/Quality control).
+A first step in our analysis pipeline is to organize data from each of our samples that were run together on an Illumina lane (De-multiplexing our data) and also to filter our data and trim off bits that have lots of errors or that have sequences from the laboratory procedures that were used to generate the data (Trimming/Quality control).  To begin please make sure you are in your home directory by typing this:
+
+`cd ~`
 
 When samples are run on an Illumina machine, DNA is broken up into many small fragments and a small bit of DNA called an adaptor is then added on each of the fragments. This adaptor allows the sequencing process to occur, essentially by making possible high-throughput put polymerase chain reaction (ask Ben about this if you are unfamiliar). To make possible the multiplexing of samples on one Illumina lane, each sample is linked to a unique adaptor that contains a "barcode" sequence that allows us to sort out which samples each sequence came from.  For our dataset, we have nine individuals from one species (the Tonkean macaque). Each of the samples received the following barcodes (the sample name is followed by the barcode):
 ```
@@ -57,7 +59,7 @@ To use `RADpools` we need to load some perl modules first.  Please type this:
 
 The command to execute this program on our data is:
 
-`/apps/RADtools/1.2.4/RADpools -i /home/datasets/2015_Ben_Evans/data -d /home/datasets/2015_Ben_Evans/data/monkey.pools -s -f -o`
+`/apps/RADtools/1.2.4/RADpools -i /home/datasets/2015_Ben_Evans/data -d ./monkey -s -f -o`
 
 The first part (`/apps/RADpools`) directs the computer to run the program RADpools, which is in the director called `apps`.  The `-i` flag specifies where the data are.  The `-d` flag specifies where the barcode file is that we made eariler.  The `-s` flag tells RADpools that the data have Sanger quality scores.  The `-f` flag tells RADpools to interpret the barcodes using the "fuzzy" option, which allows for errors and asigns barcodes with errors to the nearest pool. The `-o` flag directs RADpools to output the trimmed data in fastq format.  When the program is done sorting the data, it should generate a directory called `monkey` in your current directory. (The name is just whatever the suffix is of your `.pools` file. This may take a little while to run so let's get it started now and then move on to the next step.  
 
