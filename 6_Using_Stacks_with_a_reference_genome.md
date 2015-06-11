@@ -23,7 +23,7 @@ To get started, lets first make a directory within the `monkey` directory that h
 
 If the path that is shown is not the `monkey` directory, please change to it by typing this:
 
-`cd path_to_monkey_directory`
+`cd ~/monkey`
 
 OK, now please make a new direcotry by typing this:
 
@@ -55,17 +55,17 @@ One way to quantify population structure is using the F-statistic (F<sub>ST</sub
 
 ```
 **Path_to_stacks***/stacks-1.30/scripts/ref_map.pl -S -b 1 -n 0 \
-	-O **Path_to_data***/population_map \
-	-o **Path_to_data***/Stacks_Results \
-   	-s **Path_to_data***/PF515_sorted.bam \
-    -s **Path_to_data***/PM561_sorted.bam \
-    -s **Path_to_data***/PM565_sorted.bam \
-    -s **Path_to_data***/PM566_sorted.bam \
-    -s **Path_to_data***/PM567_sorted.bam \
-    -s **Path_to_data***/PM582_sorted.bam \
-    -s **Path_to_data***/PM584_sorted.bam \
-    -s **Path_to_data***/PM592_sorted.bam \
-    -s **Path_to_data***/PM602_sorted.bam \
+	-O ~/monkey/population_map \
+	-o ~/monkey/Stacks_Results \
+   	-s ~/monkey/PF515_sorted.bam \
+    -s ~/monkey/PM561_sorted.bam \
+    -s ~/monkey/PM565_sorted.bam \
+    -s ~/monkey/PM566_sorted.bam \
+    -s ~/monkey/PM567_sorted.bam \
+    -s ~/monkey/PM582_sorted.bam \
+    -s ~/monkey/PM584_sorted.bam \
+    -s ~/monkey/PM592_sorted.bam \
+    -s ~/monkey/PM602_sorted.bam \
    	-e **Path_to_stacks***/stacks-1.30/ -X "populations:--fstat" \
 ```
 
