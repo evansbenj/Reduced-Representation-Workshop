@@ -32,11 +32,11 @@ Before we map our data to this reference genome, we need to generate some files 
 
   `/apps/samtools/0.1.19/samtools faidx /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`
 
-  Here, the `/apps/samtools` command tells the computer to execute the `samtools` program.  The `faidx` option tells samtools to generate a file called `chrXXX.fai` in which each line has information for one the contigs within the reference genome, including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
+  Here, the `/apps/samtools/0.1.19/samtools` command tells the computer to execute the `samtools` program.  The `faidx` option tells samtools to generate a file called `chrXXX.fai` in which each line has information for one the contigs within the reference genome, including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
 
-3.  The third thing we need to do is to generate a `.dict` file with a program called [`piccard`](http://broadinstitute.github.io/picard/).  Please type this command:
+3.  The third thing we need to do is to generate a `.dict` file with a program called [`picard`](http://broadinstitute.github.io/picard/).  Please type this command:
 
-  `java -jar /apps/picard.jar CreateSequenceDictionary REFERENCE=/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa OUTPUT=/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.dict`
+  `java -jar /apps/picard-tools/1.131/picard.jar CreateSequenceDictionary REFERENCE=/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa OUTPUT=/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.dict`
 
   This should generate a file called `/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.dict`
 
