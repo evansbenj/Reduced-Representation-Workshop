@@ -8,7 +8,7 @@ Depending on your organism of study, there may or may not be a relatively closel
 
 Reference genomes for many sequences are available at multiple publicly available databases.  We can download the complete genome sequence for the rhesus macaque from the [USC genome browser](http://hgdownload.cse.ucsc.edu/downloads.html#rhesus).  I did this earlier because it takes a while.  The whole genome comes as a fasta-formatted file, and I split it up into individual fasta files corresponding with each of the chromosomes.  These are located in this directory:
 
-/home/datasets/2015_Ben_Evans/rhesus_chromosomes/
+`/home/datasets/2015_Ben_Evans/rhesus_chromosomes/`
 
 Please go to this directory using this command:
 
