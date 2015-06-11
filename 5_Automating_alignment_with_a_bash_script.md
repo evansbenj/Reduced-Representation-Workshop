@@ -9,11 +9,11 @@ Here is a bash script that should accomplish this:
 ```
 #!/bin/bash                                                                              
 
-path_to_bwa="/work/ben/workshop_software/bwa-0.7.12"
-path_to_samtools="/work/ben/workshop_software/samtools-1.2"
-path_to_data="/work/ben/2015_workshop/data/monkey"
-path_to_chromosome="/work/ben/2015_workshop/rhesus_chromosomes"
-chromosome="chr3.fa"
+path_to_bwa="/apps/bwa-0.7.12"
+path_to_samtools="/apps/samtools-1.2"
+path_to_data="/home/datasets/2015_Ben_Evans/data/monkey"
+path_to_chromosome="/home/datasets/2015_Ben_Evans/rhesus_chromosomes"
+chromosome="chrXXX.fa"
 
 individuals="PF515                                                                       
 PM561                                                                                    
@@ -47,7 +47,7 @@ In the beginning of the script 5 variables are defined that specify, respectivel
 
 `emacs alignment_commando`
 
-This should open up an emacs window.  You can then paste the bash script into this window.  Now use the arrow keys to scroll up to the line that says `chromosome="chr3.fa"` and change the part that says `chr3.fa` to correspond with whatever chromosome you are working on.  For example, if youa re working on chromosome 10, please change this to instead read `chr10.fa`.
+This should open up an emacs window.  You can then paste the bash script into this window.  Now use the arrow keys to scroll up to the line that says `chromosome="chrXXX.fa"` and change the part that says `chrXXX.fa` to correspond with whatever chromosome you are working on.  For example, if youa re working on chromosome 10, please change this to instead read `chr10.fa`.
 
 Now type `Ctrl-x` and `Ctrl-s` to save the file.
 
