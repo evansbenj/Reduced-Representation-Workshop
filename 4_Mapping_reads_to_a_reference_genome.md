@@ -2,35 +2,43 @@
 
 (or you can go back to the de-multipexing page [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/3_De-multiplexing.md)).
 
-Depending on your organism of study, there may or may not be a relatively closely related genome sequence to work with.  Depending on your research question, this may or may not be useful.  In our example study on Tonkean macaques, we are ultimately interested in quantifying molecular polymorphism on the X chromosome and comparing it to polymorphism on the autosomes.  For this reason, the genomic location of the data is crucial and we can benefit from the complete genome sequence of a closely related species of macaque monkey, the rhesus macaque.  We will use a program called [`bwa`] (http://sourceforge.net/projects/bio-bwa/files) and also [`samtools`](http://samtools.sourceforge.net/), to map our data to individual chromosomes of the genome of a rhesus macaque (*Macaca mulatta*).  Normally one would map reads to an entire genome because the data were generated from a complete genome but in our case we are doing only an example analysis and we have to work within time constraints.
+Depending on your organism of study, there may or may not be a relatively closely related genome sequence to work with.  Depending on your research question, this may or may not be useful.  In our example study on Tonkean macaques, we are ultimately interested in quantifying molecular polymorphism on the X chromosome and comparing it to polymorphism on the autosomes.  For this reason, the genomic location of the data is crucial and we can benefit from the complete genome sequence of a closely related species of macaque monkey, the rhesus macaque.  We will use a program called [`bwa`] (http://sourceforge.net/projects/bio-bwa/files) and also [`samtools`](http://samtools.sourceforge.net/), to map our data to individual chromosomes of the genome of a rhesus macaque (*Macaca mulatta*).  Normally one would map reads to an entire genome because the data were generated from a complete genome, but in our case we are doing only an example analysis and we have to work within time constraints.  Ben will assign each of you a chromosome to work on.
 
 ## Preparing your reference genome
 
-Reference genomes for many sequences are available at multiple publicly available databases.  We can download the complete genome sequence for the rhesus macaque from the [USC genome browser](http://hgdownload.cse.ucsc.edu/downloads.html#rhesus).  I did this earlier because it takes a while.  It is a fasta-formatted file, and is located in this directory:
+Reference genomes for many sequences are available at multiple publicly available databases.  We can download the complete genome sequence for the rhesus macaque from the [USC genome browser](http://hgdownload.cse.ucsc.edu/downloads.html#rhesus).  I did this earlier because it takes a while.  The whole genome comes as a fasta-formatted file, and I split it up into individual fasta files corresponding with each of the chromosomes.  These are located in this directory:
 
-** insert path to rhesus macaque genome here **
+/home/datasets/2015_Ben_Evans/rhesus_chromosomes/
 
 Please go to this directory using this command:
 
-`cd ** insert path to rhesus macaque genome here **`
+`cd /home/datasets/2015_Ben_Evans/rhesus_chromosomes/`
+
+Now check out what is in this directory by typing this:
+
+`ls`
 
 Before we map our data to this reference genome, we need to generate some files that will be used in the mapping process.  This can be done in three steps:
 
-1. ./bwa index -a bwtsw **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
+1. `./bwa index -a bwtsw /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`
 
-  The `./bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indicated by the `**path_to_rhesus_genome**/**rhesus_genome_fasta_file**`.  The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.  This step will take a few minutes.
+  The `./bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indicated by the `/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`. The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.  You will need to change the `chrXXX.fa` to match whatever chromosome Ben tells you to work on.  For example, if you are working on chromosome 9, you should type this:
+
+`./bwa index -a bwtsw /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chr9.fa`  
+  
+  This step will take a few minutes.
 
 2. We now need to to generate another file using `samtools`.  Please type this:
 
-  ./samtools faidx **path_to_rhesus_genome**/**rhesus_genome_fasta_file**
+  ./samtools faidx /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa
 
-  Here, the `./samtools` command tells the computer to execute the `samtools` program.  The `faidx` option tells samtools to generate a file called `**rhesus_genome_fasta_file**.fai` in which each line has information for one the contigs within the reference genome, including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
+  Here, the `./samtools` command tells the computer to execute the `samtools` program.  The `faidx` option tells samtools to generate a file called `chrXXX.fai` in which each line has information for one the contigs within the reference genome, including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
 
 3.  The third thing we need to do is to generate a `.dict` file with a program called [`piccard`](http://broadinstitute.github.io/picard/).  Please type this command:
 
-  `java -jar picard.jar CreateSequenceDictionary REFERENCE=**rhesus_genome_fasta_file** OUTPUT=**rhesus_genome_fasta_file**.dict`
+  `java -jar picard.jar CreateSequenceDictionary REFERENCE=/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa OUTPUT=/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.dict`
 
-  This should generate a file called "**rhesus_genome_fasta_file**.dict"
+  This should generate a file called `/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.dict`
 
 ## Mapping the data to the reference genome
 
