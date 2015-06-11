@@ -10,7 +10,7 @@ Here is a bash script that should accomplish this:
 #!/bin/bash                                                                              
 
 path_to_bwa="/apps/bwa-0.7.12"
-path_to_samtools="/apps/samtools-1.2"
+path_to_samtools="/apps/samtools/0.1.19/"
 path_to_data="/home/datasets/2015_Ben_Evans/data/monkey"
 path_to_chromosome="/home/datasets/2015_Ben_Evans/rhesus_chromosomes"
 chromosome="chrXXX.fa"
