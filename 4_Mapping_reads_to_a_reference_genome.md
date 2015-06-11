@@ -38,7 +38,7 @@ Before we map our data to this reference genome, we need to generate some files 
 
   `java -jar /apps/picard-tools/1.131/picard.jar CreateSequenceDictionary REFERENCE=/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa OUTPUT=/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.dict`
 
-  This should generate a file called `/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.dict`
+  As before, you will need to change the `chrXXX` in this command to match the chromosome you are working with.  This should generate a file called `/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.dict`
 
 ## Mapping the data to the reference genome
 
