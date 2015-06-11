@@ -51,6 +51,10 @@ Illumina generates sequences that have errors in base calls.  Errors typically b
 
 We will use software called `RADpools` to de-multiplex and trim our data.  This software is available [here](https://github.com/johnomics/RADtools/blob/master/RADpools).
 
+To use `RADpools` we need to load some perl modules first.  Please type this:
+
+`module load app/radtools`
+
 The command to execute this program on our data is:
 
 `/apps/RADpools -i /home/datasets/2015_Ben_Evans/data -d /home/datasets/2015_Ben_Evans/monkey.pools -s -f -o`
