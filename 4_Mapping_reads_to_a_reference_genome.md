@@ -42,7 +42,13 @@ Before we map our data to this reference genome, we need to generate some files 
 
 ## Mapping the data to the reference genome
 
-Now we can align the data from each individual to the reference genome using `bwa` as follows:
+Now we can align the data from each individual to the reference genome using `bwa`.  First let's go back to the directory that has our de-multiplexed data in it like this:
+
+`cd /home/username/monkey`
+
+You can see the demultiplexed fastq files by typing the `ls` command.
+
+Now let's map data from one individual to the reference genome as follows:
 
 `/apps/bwa/0.7.12/bwa aln reference_genome individual_1.fastq > individual_1.sai`
 
