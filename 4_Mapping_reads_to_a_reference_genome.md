@@ -22,7 +22,7 @@ Before we map our data to this reference genome, we need to generate some files 
 
 1. `/apps/bwa/0.7.12/bwa index -a bwtsw /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`
 
-  The `/apps/bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indicated by the `/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`. The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.  You will need to change the `chrXXX.fa` to match whatever chromosome Ben tells you to work on.  For example, if you are working on chromosome 9, you should type this:
+  The `/apps/bwa/0.7.12/bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indicated by the `/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`. The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.  You will need to change the `chrXXX.fa` to match whatever chromosome Ben tells you to work on.  For example, if you are working on chromosome 9, you should type this:
 
   `/apps/bwa/0.7.12/bwa index -a bwtsw /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chr9.fa`  
   
@@ -30,7 +30,7 @@ Before we map our data to this reference genome, we need to generate some files 
 
 2. We now need to to generate another file using `samtools`.  Please type this:
 
-  `/apps/samtools faidx /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`
+  `/apps/samtools/0.1.19/samtools faidx /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`
 
   Here, the `/apps/samtools` command tells the computer to execute the `samtools` program.  The `faidx` option tells samtools to generate a file called `chrXXX.fai` in which each line has information for one the contigs within the reference genome, including the contig name, size, location and other information.  Our reference genome has a contig for each chromosome.
 
@@ -54,7 +54,7 @@ For example, for the first individual (PF515) we could type this
 
 This command generates an intermediate file with the `.sai` suffix (which stands for `suffix array index`). Now we need to generate a `.sam` formatted file from our `.sai` files.  A `.sam` file is a tab delimited text file that contains the alignment data.  The format for this command is:
 
-`/apps/bwa samse reference_genome.fa individual_1.sai individual_1.fastq > individual_1.sam`
+`/apps/bwa/0.7.12/bwa samse reference_genome.fa individual_1.sai individual_1.fastq > individual_1.sam`
 
 We also need to add a header to each `.sam` file, so we can type this command:
 
@@ -62,14 +62,14 @@ We also need to add a header to each `.sam` file, so we can type this command:
 
 Now we can generate a `.bam` file.  A `.bam` formatted file is a binary version of the `.sam` file.
 
-`/apps/samtools view -bt reference_genome -o Individual_1.bam Individual_1.sam`
+`/apps/samtools/0.1.19/samtools view -bt reference_genome -o Individual_1.bam Individual_1.sam`
 
 Sort the `.bam` file:
 
-`/apps/samtools sort Individual_1.bam Individual_1_sorted`
+`/apps/samtools/0.1.19/samtools sort Individual_1.bam Individual_1_sorted`
 
 Make a `.bai` file:
 
-`/apps/samtools index Individual_1_sorted.bam`
+`/apps/samtools/0.1.19/samtools index Individual_1_sorted.bam`
 
 ## OK, if this all went smoothly we are now ready to make some genotype calls.  Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/5_Automating_alignment_with_a_bash_script.md) to go to the next page.
