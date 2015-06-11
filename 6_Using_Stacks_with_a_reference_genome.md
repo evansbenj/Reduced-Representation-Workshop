@@ -38,8 +38,8 @@ Let's first examine whether population structure is present within our sample by
 and now enter this (tab delimited) information:
 
 ```
-PF515_sorted</t>population_1
-PM561_sorted/tpopulation_1
+PF515_sorted<\t>population_1
+PM561_sorted\tpopulation_1
 PM565_sorted	population_1
 PM566_sorted	population_1
 PM567_sorted	population_1
