@@ -46,9 +46,15 @@ Now we can align the data from each individual to the reference genome using `bw
 
 `/apps/bwa aln reference_genome individual_1.fastq > individual_1.sai`
 
+For example, for the first individual (PF515) we could type this
+
+`/apps/bwa aln /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa PF515.fastq > PF515.sai`
+
+(but with the `chrXXX.fa` changed to match the chromosome you are working on.)
+
 This command generates an intermediate file with the `.sai` suffix (which stands for `suffix array index`). Now we need to generate a `.sam` formatted file from our `.sai` files.  A `.sam` file is a tab delimited text file that contains the alignment data.  The format for this command is:
 
-`/apps/bwa samse reference_genome individual_1.sai individual_1.fq > individual_1.sam`
+`/apps/bwa samse reference_genome.fa individual_1.sai individual_1.fastq > individual_1.sam`
 
 We also need to add a header to each `.sam` file, so we can type this command:
 
