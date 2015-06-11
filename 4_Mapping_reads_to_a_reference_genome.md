@@ -20,11 +20,11 @@ Now check out what is in this directory by typing this:
 
 Before we map our data to this reference genome, we need to generate some files that will be used in the mapping process.  This can be done in three steps:
 
-1. `/apps/bwa index -a bwtsw /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`
+1. `/apps/bwa/0.7.12/bwa index -a bwtsw /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`
 
   The `/apps/bwa` command tells the computer to execute the bwa program.  The `index` command tells `bwa` to generate index files from the rhesus genome file that is indicated by the `/home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa`. The `-a bwtsw` flag specifies the indexing algorithm for `bwa` to use.  You will need to change the `chrXXX.fa` to match whatever chromosome Ben tells you to work on.  For example, if you are working on chromosome 9, you should type this:
 
-  `/apps/bwa index -a bwtsw /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chr9.fa`  
+  `/apps/bwa/0.7.12/bwa index -a bwtsw /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chr9.fa`  
   
   This step will take a few minutes.
 
@@ -44,11 +44,11 @@ Before we map our data to this reference genome, we need to generate some files 
 
 Now we can align the data from each individual to the reference genome using `bwa` as follows:
 
-`/apps/bwa aln reference_genome individual_1.fastq > individual_1.sai`
+`/apps/bwa/0.7.12/bwa aln reference_genome individual_1.fastq > individual_1.sai`
 
 For example, for the first individual (PF515) we could type this
 
-`/apps/bwa aln /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa PF515.fastq > PF515.sai`
+`/apps/bwa/0.7.12/bwa aln /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa PF515.fastq > PF515.sai`
 
 (but with the `chrXXX.fa` changed to match the chromosome you are working on.)
 
@@ -58,7 +58,7 @@ This command generates an intermediate file with the `.sai` suffix (which stands
 
 We also need to add a header to each `.sam` file, so we can type this command:
 
-`/apps/bwa samse -r "@RG\tID:FLOWCELL1.LANE6\tSM:Individual_1\tPL:illumina" reference.fa Individual_1.sai Individual_1.fastq > Individual_1.sam`
+`/apps/bwa/0.7.12/bwa samse -r "@RG\tID:FLOWCELL1.LANE6\tSM:Individual_1\tPL:illumina" reference.fa Individual_1.sai Individual_1.fastq > Individual_1.sam`
 
 Now we can generate a `.bam` file.  A `.bam` formatted file is a binary version of the `.sam` file.
 
