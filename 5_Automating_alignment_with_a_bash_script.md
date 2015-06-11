@@ -7,22 +7,22 @@ Now that you have seen how to align data from one individual to a reference geno
 Here is a bash script that should accomplish this:
 
 ```
-#!/bin/bash                                                                              
+#!/bin/bash                                                                                                                  
 
-path_to_bwa="/apps/bwa-0.7.12"
-path_to_samtools="/apps/samtools/0.1.19/"
-path_to_data="/home/datasets/2015_Ben_Evans/data/monkey"
+path_to_bwa="/apps/bwa/0.7.12"
+path_to_samtools="/apps/samtools/0.1.19"
+path_to_data="."
 path_to_chromosome="/home/datasets/2015_Ben_Evans/rhesus_chromosomes"
 chromosome="chrXXX.fa"
 
-individuals="PF515                                                                       
-PM561                                                                                    
-PM565                                                                                    
-PM566                                                                                    
-PM567                                                                                    
-PM582                                                                                    
-PM584                                                                                    
-PM592                                                                                    
+individuals="PF515                                                                                                           
+PM561                                                                                                                        
+PM565                                                                                                                        
+PM566                                                                                                                        
+PM567                                                                                                                        
+PM582                                                                                                                        
+PM584                                                                                                                        
+PM592                                                                                                                        
 PM602"
 
 for each_individual in $individuals
@@ -31,13 +31,18 @@ do
     echo ${each_individual}
     $path_to_bwa/bwa aln $path_to_chromosome/$chromosome $path_to_data/${each_individual\
 }.fastq > $path_to_data/${each_individual}.sai
-    $path_to_bwa/bwa samse -r "@RG\tID:FLOWCELL1.LANE6\tSM:${each_individual}.fastq\tPL:\
+
+    $path_to_bwa/bwa samse -r "@RG\tID:FLOWCELL1.LANE6\tSM:${each_individual}.fastq\tPL:\                                    
 illumina" $path_to_chromosome/$chromosome $path_to_data/${each_individual}.sai $path_to_\
 data/${each_individual}.fastq > $path_to_data/${each_individual}.sam
+
     $path_to_samtools/samtools view -bt $path_to_chromosome/$chromosome -o $path_to_data\
 /${each_individual}.bam $path_to_data/${each_individual}.sam
+
     $path_to_samtools/samtools sort $path_to_data/${each_individual}.bam $path_to_data/$\
 {each_individual}_sorted
+
+     $path_to_samtools/samtools index $path_to_data/${each_individual}_sorted.bam
 
 done
 
