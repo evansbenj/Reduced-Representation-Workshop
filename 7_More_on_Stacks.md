@@ -6,7 +6,7 @@
 
 Now lets try to calculate a summary statistic from specific genomic regions using the `populations` module of stacks. To accomplish this, lets work with a larger dataset that I made earlier.  Please switch to this directory:
 
-`cd **insert_directory_with_complete_data_here***`
+`cd /home/datasets/2015_Ben_Evans/complete_data/monkey/Stacks_Results`
 
 Let's first uncompress one of the results file like this:
 
