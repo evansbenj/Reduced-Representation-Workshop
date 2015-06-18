@@ -71,7 +71,11 @@ This tells us, for each individual, what the probability that that individual is
 
 ## A quick example of plotting with `R`
 
-We can plot this by making a file and pasting these data in this file:
+To use `R` on this system, we need to load a module.  Please type this:
+
+`module load app/R`
+
+Now we can plot this by making a file and pasting these data in this file:
 
 `emacs assignments`
 
