@@ -97,4 +97,10 @@ and now exit the `R` environment:
 
 `>` `q()`
 
+We can now dowload and view this file.  To download it, please open a new session and type this:
 
+`scp username@caf-hpc1.sun.ac.za:~/monkey/Stacks_Results/temp.pdf .`
+
+where `username` is your username.  You should be prompted for a password and then your file will download to your local computer.  You should be able to find this file, and then double click on the file and view it.
+
+## OK, now let's make a quick phylogeny using the RADseq data.
