@@ -26,7 +26,11 @@ This will generate a file called `batch_1.structure.tsv` which can be used as an
 
 ## Running Structure
 
-Before we can run `Structure` with out data, we have some clerical issues to take care of.  Firstly, lets delete the first row from our input file  - this row has a comment that we don't need.  Please type this:
+Before we can run `Structure` with out data, we have some clerical issues to take care of.  First, please make sure you are in your home directory by typing this:
+
+`cd ~/monkey/Stacks_Results`
+
+Now lets delete the first row from our input file  - this row has a comment that we don't need.  Please type this:
 
 `tail -n+2 batch_1.structure.tsv > simple_structure.tsv`
 
