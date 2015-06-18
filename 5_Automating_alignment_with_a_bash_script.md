@@ -8,7 +8,7 @@ To do this, we can use a bash script.  Let's first make sure we are still in the
 
 `pwd`
 
-If you don't see `~/monkey`, please typw this:
+If you don't see `~/monkey`, please type this:
 
 `cd ~/monkey`
 
