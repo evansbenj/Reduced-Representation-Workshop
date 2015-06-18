@@ -4,23 +4,23 @@
 
 [`Structure`](http://pritchardlab.stanford.edu/structure_software/release_versions/v2.3.4/html/structure.html) is a software that attempts to assign individuals to *k* populations in such a way as to minimize Hardy-Weinberg and linkage disequilibrium.  We run `Structure` by specifying multiple values of *k* and then seeing which value(s) maximuze the likelihood of the data given the model of population structure. We can generate an input file for this program using `Stacks`. 
 
-First lets make sure we are in the Stacks_Results directory that is from the complete dataset.  Ben (only) will type this so that we will generate only one file for you all to work with:
+Because this takes a while, Ben previously generated this file for us to work with.  He did this using the following commands (please don't type these).  First he made sure he was in the Stacks_Results directory that is from the complete dataset:
 
 `cd /home/datasets/2015_Ben_Evans/complete_data/monkey/Stacks_Results`
 
-The program `Structure` can not handle all of our data from the complete dataset, so Ben will select 1000 loci randomly to analyze like this:
+The program `Structure` can not handle all of our data from the complete dataset, so Ben selected 1000 loci randomly to analyze like this:
 
 `shuf -n 1000 /home/datasets/2015_Ben_Evans/complete_data/monkey/Stacks_Results/batch_1.catalog.tags.tsv | awk '{print $3}'  > 1000_randoms`
 
 This uses another `unix` command called `shuf`.  This tells the computer to print a randomly selected value from column 3 1000 times to a file called `1000_randoms`.
 
-Now we are ready to generate an input file for `Structure`.  Ben (only) will type this:
+Then Ben was ready to generate an input file for `Structure`.  Ben typed this command:
 
-`/apps/stacks/1.29/bin/populations -P ./ -b 1 -r 1 -t 36 --structure --write_single_snp -W ./1000_randoms -B ~/chrX_list`
+`/apps/stacks/1.29/bin/populations -P ./ -b 1 -r 1 -t 36 --structure --write_single_snp -W ./1000_randoms -B chrX_list`
 
-This command directs the `populations` module of `Stacks` to output a single snp (the `--write_single_snp` flag) from tags specified by the `1000_randoms` file (the `-W` tag) but not to include any snps from chromosome X (the `-B` flag). This will take a little while.
+This command directed the `populations` module of `Stacks` to output a single snp (the `--write_single_snp` flag) from tags specified by the `1000_randoms` file (the `-W` tag) but not to include any SNPs from chromosome X (the `-B` flag).
 
-This will generate a file called `batch_1.structure.tsv` which can be used as an input file for the program `Structure`.  Please copy this to your home directory like this:
+This generated a file called `batch_1.structure.tsv` which can be used as an input file for the program `Structure`.  Please copy this to your home directory like this:
 
 `scp /home/datasets/2015_Ben_Evans/complete_data/monkey/Stacks_Results/batch_1.structure.tsv ~/monkey/Stacks_Results`
 
