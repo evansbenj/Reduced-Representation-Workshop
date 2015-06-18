@@ -50,7 +50,7 @@ This tells the system to execute the `Structure` program and it specifies the pa
 
  Assuming the command executes without error, you can check out the results in the file `output_K_3` like this:
  
- `more output_K_3`
+ `more output_K_3_f`
  
  You could scroll down to the population assignments, which should look something like this:
  ```
