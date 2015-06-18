@@ -6,7 +6,7 @@
 
 First lets make sure we are in your home directory.  Please type this:
 
-`cd ~/monkey/Structure_Results/`
+`cd ~/monkey/Stacks_Results/`
 
 The program `Structure` can not handle all of our data from the complete dataset, so let's select 1000 loci randomly to analyze like this:
 
