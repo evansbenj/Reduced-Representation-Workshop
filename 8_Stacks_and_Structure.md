@@ -44,7 +44,7 @@ This should output the number of tab spaces in the first column of the file `sim
 
 Now we are ready to run `Structure`.  Please type this command:
 
-`/work/ben/workshop_software/console/structure -m /work/ben/workshop_software/console/mainparams -e /work/ben/workshop_software/console/extraparams -K 3 -L 279 -N 9 -i simple_structure.tsv -o output_K_3`
+`/apps/Structure/bin/structure -m /work/ben/workshop_software/console/mainparams -e /work/ben/workshop_software/console/extraparams -K 3 -L 279 -N 9 -i simple_structure.tsv -o output_K_3`
 
 This tells the system to execute the `Structure` program and it specifies the paths to two files (`mainparams` and `extraparams`) that are used in the analysis.  It then has flags for the number of populations (`-K`), the number of loci (`-L`; based on the number we got above from the `head` command), the number of individuals (`-N`; our study has 9 individuals), the input file (`-i`) and an output file (`-o`).
 
