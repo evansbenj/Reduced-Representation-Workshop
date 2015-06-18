@@ -8,11 +8,7 @@ Now lets try to calculate a summary statistic from specific genomic regions usin
 
 `cd /home/datasets/2015_Ben_Evans/complete_data/monkey/Stacks_Results`
 
-Let's first uncompress one of the results file like this:
-
-`gunzip batch_1.catalog.tags.tsv.gz`
-
-and then look at the compressed file like this:
+Let's first look at the catalog file like this:
 
 `more batch_1.catalog.tags.tsv`
 
