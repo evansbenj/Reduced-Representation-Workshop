@@ -24,7 +24,7 @@ We can view this file by typing:
 
 Now, if we want to calculate pairwise nucleotide diversity on the autosomes, we can use the `populations` module of `Stacks` with the `blacklist` flag as follows:
 
-`/work/ben/workshop_software/stacks-1.30/populations -P /work/ben/2015_workshop/complete_data/monkey/Stacks_Results -b 1 -r 1 -t 36 -B ~/chrX_list`
+`/apps/stacks/1.29/bin/populations -P ~/monkey/Stacks_Results -b 1 -r 1 -t 36 -B ~/chrX_list`
 
 This command directs the `populations` module of `Stacks` to write results to a directory specified by the `-P` flag. The `-r` flag says we want to only print data where 100% of the individuals have a genotype.  The `-b` and `-t` flags specify, respectively, that `populations` should focus on batch_ID number 1 (you can work with special IDs if you need to but this is beyond the scope of this workshop) and that `populations` should use 36 threads to do the calculations.  The calculations will include all positions except those on the X chromosome, which is blacklisted by the `-B` flag.
 
