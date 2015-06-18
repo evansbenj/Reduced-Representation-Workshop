@@ -34,7 +34,7 @@ We can view the pairwise nucleotide diversity statistic (Pi) in a file called `b
 
 Similarly, if we want to calculate Pi on only the X chromosome, we can use the `chrX_list` as a `whitelist` as follows:
 
-`/work/ben/workshop_software/stacks-1.30/populations -P /work/ben/2015_workshop/complete_data/monkey/Stacks_Results -b 1 -r 1 -t 36 -W chrX_list`
+`/apps/stacks/1.29/bin/populations -P ~/monkey/Stacks_Results -b 1 -r 1 -t 36 -W ~/chrX_list`
 
 There are problems with this calculation using only the X chromosome because some of the individuals are males; Ben will discuss these problems and a workaround.
 
