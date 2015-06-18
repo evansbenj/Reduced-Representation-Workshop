@@ -85,11 +85,11 @@ If you now paste the data beginning with the line `1 PF515_sorte...` and save it
 
 and make a pdf..
 
-`>`  `pdf("temp.pdf")`
+`>`  `pdf("temp.pdf", height=3, width=6)`
 
 and make a barplot
 
-`>` `barplot(as.matrix(t(dat[,6:8])))`
+`>` `barplot(as.matrix(t(dat[,6:8])), names.arg=dat$V2, col=rainbow(3), las=2, cex.names=0.65, cex.axis=0.65)`
 
 This command tells R to make a boxplot using columns 6 thru 8 of the table called `dat`.  We have transformed these data for this plot using `t()`.
 
