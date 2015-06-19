@@ -88,7 +88,7 @@ Where `XXX` is the sampleid number.  If you want to know the average depth acros
 
 `/apps/samtools/0.1.19/samtools depth XXX_sorted.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'`
 
-Here the vertical bar `|` is a "pipe" that sends the information from the command before it to the command after it.  So the data you generated will be parsed with the unix `awk` command.  This will add the values of the third column `$3` to a variable called `sum` and then at the end (`END`) print out the word `Average` followed by the quotient `sum/NR` where NR is the number of rows.
+Here the vertical bar `|` is a "pipe" that sends the information from the command before it to the command after it.  So the data you generated will be parsed with the unix `awk` command.  This will add the values of the third column `$3` to a variable called `sum` and then at the end (`END`) print out the word `Average` followed by the quotient `sum/NR` where `NR` is a built in variable that keeps track of the number of records.  A good description of `awk` is [here](http://www.folkstalk.com/2011/12/good-examples-of-awk-command-in-unix.html).
 
 Now it is your turn.  Using the manual for [samtools](http://www.htslib.org/doc/samtools-0.1.19.html) please quantify how many reads mapped to yoru chromosome for each individual.
 
