@@ -42,13 +42,13 @@ Before we map our data to this reference genome, we need to generate some files 
 
 ## Mapping the data to the reference genome
 
-Now we can align the data from each individual to the reference genome using `bwa`.  First let's go back to the directory that has our de-multiplexed data in it like this:
+Now we can align the data from each individual to the reference genome using [`bwa`] (http://sourceforge.net/projects/bio-bwa/files).  First let's go back to the directory that has our de-multiplexed data in it like this:
 
 `cd ~/monkey`
 
 You can see the demultiplexed fastq files by typing the `ls` command.
 
-Now let's map data from one individual to the reference genome as follows:
+Now let's map data from one individual to the reference genome using `bwa` as follows:
 
 `/apps/bwa/0.7.12/bwa aln reference_genome individual_1.fastq > individual_1.sai`
 
@@ -57,6 +57,8 @@ For example, for the first individual (PF515) we could type this
 `/apps/bwa/0.7.12/bwa aln /home/datasets/2015_Ben_Evans/rhesus_chromosomes/chrXXX.fa PF515.fastq > PF515.sai`
 
 (but with the `chrXXX.fa` changed to match the chromosome you are working on.)
+
+As you can see in the [`bwa` manual] (http://bio-bwa.sourceforge.net/bwa.shtml), the `aln` flag tells `bwa` to align the reads to the reference genome (or, using the `bwa` jargon, find the coordinates of the reference genome that map each read. There are several additional options you could specify if you want.  For example, you could use the `-M` flag to set a limit on the number of mismatches between a read and the reference genome.  Because we are mapping data from one species to a reference genome from another, we will not do this.
 
 This command generates an intermediate file with the `.sai` suffix (which stands for `suffix array index`). Now we need to generate a `.sam` formatted file from our `.sai` files.  A `.sam` file is a tab delimited text file that contains the alignment data.  The format for this command is:
 
