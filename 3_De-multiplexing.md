@@ -65,6 +65,8 @@ The first part (`/apps/RADpools`) directs the computer to run the program RADpoo
 
 ## How many reads do we have for each individual?
 
-As an exercise, please use the [`grep`](http://unixhelp.ed.ac.uk/CGI/man-cgi?grep) command to count how many reads we have for each individual.  A hint is that using `grep`, you can count the number of times an identifier character for each sequence appears in each file for each individual.
+As an exercise, please use the [`grep`](http://unixhelp.ed.ac.uk/CGI/man-cgi?grep) command to count how many reads we have for each individual.  A hint is that using `grep`, you can count the number of times an identifier character for each sequence appears in each file for each individual.  
+
+How would your `grep` command differ for a `fasta` file compared to a `fastq` file?
 
 ## OK, now we are ready to move on to mapping reads to a reference genome.  Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/4_Mapping_reads_to_a_reference_genome.md).
