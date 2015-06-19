@@ -63,4 +63,8 @@ The command to execute this program on our data is:
 
 The first part (`/apps/RADpools`) directs the computer to run the program RADpools, which is in the director called `apps`.  The `-i` flag specifies where the data are.  The `-d` flag specifies where the barcode file is that we made eariler (here you don't write the full name of the file, which you remember is `monkey.pools` – the program assumes the suffix is `.pools`).  The `-s` flag tells RADpools that the data have Sanger quality scores.  The `-f` flag tells RADpools to interpret the barcodes using the "fuzzy" option, which allows for errors and asigns barcodes with errors to the nearest pool. The `-o` flag directs RADpools to output the trimmed data in fastq format.  The `-t` flag tells RADpools to trim all of the sequences to a length of 75 base pairs.  The `q` flag tells RADpools to throw out any sequences that have any bases with a quality score below 10.  When the program is done sorting the data, it should generate a directory called `monkey` in your current directory. (The name is just whatever the suffix is of your `.pools` file.)  All of this information is available, of course, in the manual that comes with the program. 
 
+## How many reads do we have for each individual?
+
+As an exercise, please use the [`grep`](http://unixhelp.ed.ac.uk/CGI/man-cgi?grep) command to count how many reads we have for each individual.  A hint is that using `grep`, you can count the number of times an identifier character for each sequence appears in each file for each individual.
+
 ## OK, now we are ready to move on to mapping reads to a reference genome.  Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/4_Mapping_reads_to_a_reference_genome.md).
