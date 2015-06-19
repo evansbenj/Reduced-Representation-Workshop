@@ -46,7 +46,7 @@ Now we can use a program called `Phylip` to make a quick phylogenetic tree.  We 
 
 To make a phylogenetic tree with Phylip, please type this:
 
-`XXX batch_1.phylip`
+`/apps/PHYLIP/3.696/exe/neighbor batch_1.phylip`
 
 This should generate a tree file called `batch_1.phylip.tree` in your home directory.  You can copy it to your local computer by opening up another session and typing this:
 
