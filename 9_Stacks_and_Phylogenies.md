@@ -42,7 +42,7 @@ You should be able to see a Phylip formatted file. You can press the space bar t
 
 ## Making a Quick phylogeny using `Phylip`
 
-Now we can use a program called `Phylip` to make a quick phylogenetic tree.  We will make a neighborjoining tree because it is very quick to do.  For your studies I recommend to instead use maximum likelihood or Bayesian methods to make phylogenetic trees, for example using software such as [MrBayes](http://mrbayes.sourceforge.net/), [BEAST](http://beast.bio.ed.ac.uk/), and [RaxML](http://sco.h-its.org/exelixis/web/software/raxml/index.html).
+Now we can use a program called `Phylip` to make a quick phylogenetic tree.  You can find out about the programs available in Phylip [here](http://evolution.genetics.washington.edu/phylip/phylip.html). We will make a neighborjoining tree because it is very quick to do. The Phylip program that does this is called `neighbor`.  Please open up a window on your browser to look at the commands for this program.  Note that for your research I recommend to instead use maximum likelihood or Bayesian methods to make phylogenetic trees, for example using software such as [MrBayes](http://mrbayes.sourceforge.net/), [BEAST](http://beast.bio.ed.ac.uk/), and [RaxML](http://sco.h-its.org/exelixis/web/software/raxml/index.html).  We are using `neighbor` because it is quick.
 
 To make a phylogenetic tree with Phylip, please type this:
 
