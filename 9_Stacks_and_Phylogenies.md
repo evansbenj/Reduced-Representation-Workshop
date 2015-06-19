@@ -1,6 +1,6 @@
 ## Using `Stacks` to export a file for phylogenetic analysis.
 
-(Or you can go back to Stacks and Structure [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/8_Stacks_and_Structure.md).
+(Or you can go back to Stacks and Structure [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/8_Stacks_and_Structure.md)).
 
 Much in the same way that we used `Stacks` to export an input file for the program `Structure`, we can also use `Stacks` to export an input file for phylogenetic analysis.  Let's try this now.
 
@@ -32,6 +32,16 @@ This generated a file called `batch_1.phylip.tsv`.
 
 Please copy this file to your home directory like this:
 
-`scp /home/datasets/2015_Ben_Evans/complete_data/monkey/Stacks_Results/batch_1.phylip.tsv ~/monkey/Stacks_Results`
+`scp /home/datasets/2015_Ben_Evans/complete_data/monkey/Stacks_Results/batch_1.phylip ~/monkey/Stacks_Results`
+
+Let's have a look at this file now.  Please type this:
+
+`more batch_1.phylip`
+
+You should be able to see a Phylip formatted file. The first line has the number of taxa (9 in this case) followed by the number of characters of data (70484 in this case).  The next line has a taxon name (`1`, which corresponds to the first sample PF515) followed by the sequence data.  Some of these data are regular nucleotides (A, C, G, or T) and others are IUPAC symbols that indicate heterozygous SNPs (Y for C/T, S for A/G, etc).  The lines after this give data for the next samples.
+
+## Making a Quick phylogeny using `Phylip`
+
+
 
 
