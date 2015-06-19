@@ -107,4 +107,9 @@ Here the dot forwardslash (`./`) tells the computer that you want it to look in 
 
 If your script lacks errors, you should see the names of the fruit you had in the program.  If it gives you an error, please let Ben know.
 
+## Now try it on your own
+
+As an exercise, please write and execute a bash script that will execute the script we just made (`fruit_script`) one hundred times.  Please use a for loop such as one of the ones described [here](http://www.cyberciti.biz/faq/bash-for-loop/).
+
+
 ## OK, now lets learn how to de-multiplex Illumina data by clicking [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/3_De-multiplexing.md).
