@@ -38,9 +38,21 @@ Let's have a look at this file now.  Please type this:
 
 `more batch_1.phylip`
 
-You should be able to see a Phylip formatted file. The first line has the number of taxa (9 in this case) followed by the number of characters of data (70484 in this case).  The next line has a taxon name (`1`, which corresponds to the first sample PF515) followed by the sequence data.  Some of these data are regular nucleotides (A, C, G, or T) and others are IUPAC symbols that indicate heterozygous SNPs (Y for C/T, S for A/G, etc).  The lines after this give data for the next samples.
+You should be able to see a Phylip formatted file. The first line has the number of taxa (9 in this case) followed by the number of characters of data (70484 in this case).  The next line has a taxon name (`1`, which corresponds to the first sample PF515) followed by the sequence data.  Some of these data are regular nucleotides (A, C, G, or T) and others are [IUPAC symbols](http://www.bioinformatics.org/sms/iupac.html) that indicate heterozygous SNPs (Y for C/T, R for A/G, etc).  The lines after this give data for the next samples.
 
 ## Making a Quick phylogeny using `Phylip`
+
+Now we can use a program called `Phylip` to make a quick phylogenetic tree.  We will make a neighborjoining tree because it is very quick to do.  For your studies I recommend to instead use maximum likelihood or Bayesian methods to make phylogenetic trees, for example using software such as [MrBayes](http://mrbayes.sourceforge.net/), [BEAST](http://beast.bio.ed.ac.uk/), and [RaxML](http://sco.h-its.org/exelixis/web/software/raxml/index.html).
+
+To make a phylogenetic tree with Phylip, please type this:
+
+`XXX batch_1.phylip`
+
+This should generate a tree file called `batch_1.phylip.tree` in your home directory.  You can copy it to your local computer by opening up another session and typing this:
+
+`scp username@caf-hpc1.sun.ac.za:~/monkey/Stacks_Results/batch_1.phylip.tree .`
+
+You can now view the tree you made using the [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) program that should be available on your local computer.
 
 
 
