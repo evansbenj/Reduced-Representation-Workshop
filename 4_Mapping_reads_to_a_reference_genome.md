@@ -78,4 +78,20 @@ Make a `.bai` file:
 
 `/apps/samtools/0.1.19/samtools index Individual_1_sorted.bam`
 
+## Problem 3: Assessing coverage
+
+Samtools can provide information on the number of reads for each position of the reference sequence for which there are data.  You can see this information by typing this:
+
+`/apps/samtools/0.1.19/samtools depth XXX_sorted.bam`
+
+Where `XXX` is the sampleid number.  If you want to know the average depth across all sites, you could type this:
+
+`/apps/samtools/0.1.19/samtools depth XXX_sorted.bam | awk '{sum+=$3} END { print "Average = ",sum/NR}'`
+
+Here the vertical bar `|` is a "pipe" that sends the information from the command before it to the command after it.  So the data you generated will be parsed with the unix `awk` command.  This will add the values of the third column `$3` to a variable called `sum` and then at the end (`END`) print out the word `Average` followed by the quotient `sum/NR` where NR is the number of rows.
+
+Now it is your turn.  Using the manual for [samtools](http://www.htslib.org/doc/samtools-0.1.19.html) please quantify how many reads mapped to yoru chromosome for each individual.
+
+
+
 ## OK, if this all went smoothly we are now ready to make some genotype calls.  Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/5_Automating_alignment_with_a_bash_script.md) to go to the next page.
