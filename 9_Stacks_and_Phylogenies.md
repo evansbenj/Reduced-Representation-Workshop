@@ -42,15 +42,23 @@ You should be able to see a Phylip formatted file. You can press the space bar t
 
 ## Making a Quick phylogeny using `Phylip`
 
-Now we can use a program called `Phylip` to make a quick phylogenetic tree.  You can find out about the programs available in Phylip [here](http://evolution.genetics.washington.edu/phylip/phylip.html). We will make a neighborjoining tree because it is very quick to do. The Phylip program that does this is called `neighbor`.  Please open up a window on your browser to look at the commands for this program.  Note that for your research I recommend to instead use maximum likelihood or Bayesian methods to make phylogenetic trees, for example using software such as [MrBayes](http://mrbayes.sourceforge.net/), [BEAST](http://beast.bio.ed.ac.uk/), and [RaxML](http://sco.h-its.org/exelixis/web/software/raxml/index.html).  We are using `neighbor` because it is quick.
+Now we can use a program called `Phylip` to make a quick phylogenetic tree.  You can find out about the programs available in Phylip [here](http://evolution.genetics.washington.edu/phylip/phylip.html). We will make a neighborjoining tree because it is very quick to do. The Phylip programs that do this for us are called `dnadist` and `neighbor`.  Please open up a window on your browser to look at the commands for these programs.  Note that for your research I recommend to instead use maximum likelihood or Bayesian methods to make phylogenetic trees, for example using software such as [MrBayes](http://mrbayes.sourceforge.net/), [BEAST](http://beast.bio.ed.ac.uk/), and [RaxML](http://sco.h-its.org/exelixis/web/software/raxml/index.html).  We are using `neighbor` because it is quick.
 
-To make a phylogenetic tree with Phylip, please type this:
+To make a phylogenetic tree with Phylip, we first need to make a matrix of pairwise distances from our sequence data.  You can make a distance matrix by typing this:
 
-`/apps/PHYLIP/3.696/exe/neighbor batch_1.phylip`
+`/apps/PHYLIP/3.696/exe/dnadist`
 
-This should generate a tree file called `batch_1.phylip.tree` in your home directory.  You can copy it to your local computer by opening up another session and typing this:
+This will open up a menu of options.  You can enter `batch_1.phylip` for your input file.  I suggest naming your output file, which is the matrix of pairwise distances, something useful such as `batch_1.phylip.dist`.  You will use this as your input for the `Phylip` program called `neighbor`.
 
-`scp username@caf-hpc1.sun.ac.za:~/monkey/Stacks_Results/batch_1.phylip.tree .`
+To run `neighbor` please type this:
+
+`/apps/PHYLIP/3.696/exe/neighbor`
+
+You will be prompted for a distance file and you will create two output files.  One is a not very useful graphical representation of the neighborjoining tree.  The second is a parenthetical notation of a phylogeny, including branch lengths.  Name this second file something useful such as `batch_1.phylip.tre`.
+
+You can copy it to your local computer by opening up another `PuTTy` session and typing this:
+
+`scp username@caf-hpc1.sun.ac.za:~/monkey/Stacks_Results/batch_1.phylip.tre .`
 
 You can now view the tree you made using the [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) program that should be available on your local computer.
 
