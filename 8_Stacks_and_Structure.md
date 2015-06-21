@@ -103,4 +103,8 @@ We can now dowload and view this file.  To download it, please open a new sessio
 
 where `username` is your username.  You should be prompted for a password and then your file will download to your local computer.  You should be able to find this file, and then double click on the file and view it.
 
+## Problem 5.
+
+OK, now please generate a plot from Structure with *k* equal to 2 and then another plot with *k* equal to 4.  When can you conclude by comparing these plots?
+
 ## OK, now let's make a quick phylogeny using the RADseq data.
