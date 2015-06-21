@@ -107,4 +107,4 @@ where `username` is your username.  You should be prompted for a password and th
 
 OK, now please generate a plot from Structure with *k* equal to 2 and then another plot with *k* equal to 4.  When can you conclude by comparing these plots?
 
-## OK, now let's make a quick phylogeny using the RADseq data.
+## OK, now let's make a [quick phylogeny using the RADseq data](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/9_Stacks_and_Phylogenies.md).
