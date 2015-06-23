@@ -20,7 +20,15 @@ This command (short for "print working directory") should print out the home dir
 
 `/home/username`
 
-Each forwardslash divides the name of a directory; the directories listed on the right side are inside the ones that are on the left.  To move to a different directory you can use the change directory command:
+Each forwardslash divides the name of a directory; the directories listed on the right side are inside the ones that are on the left.  
+
+This cluster (like most clusters) consists of a 'head' node that acts as a portal between the cluster and the rest of the world.  Often the head node is not designed for intensive computation - instead it is just used to dispatch jobs to other processors that have more power.  The cluster we are using has a quequing system.  For the sake of simplicity, we have been granted permission by the system administrator to run jobs directly on a powerful node without using the quequing system. To access this node, please type this:
+
+`ssh n01.hpc`
+
+If you type `pwd`, you will see that you are still in the same directory as before, even though we are now working in a different computer.  The files we generate on this computer will be accessible from any node on the cluster.
+
+To move to a different directory you can use the change directory command:
 
 `cd`
 
