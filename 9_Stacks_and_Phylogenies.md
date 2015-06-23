@@ -62,6 +62,9 @@ You can copy it to your local computer by opening up another `PuTTy` session and
 
 You can now view the tree you made using the [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) program that should be available on your local computer.
 
+## And this is just the beginning
+
+We covered some simple examples aimed at getting you started.  Not surprisingly there is much more to learn and each individual project will require some customization. To further increase your analytical flexibility, a simple first step would be to learn a simple computing language that can allow you to parse files and do simple calculations and iterative tasks.  I use `Perl` for this and `Python` is also a great option.  
 
 
 
