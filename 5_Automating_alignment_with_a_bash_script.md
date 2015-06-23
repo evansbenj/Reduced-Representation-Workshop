@@ -62,7 +62,7 @@ And now we should be able to execute the file.  Type this:
 
 `./alignment_commando`
 
-## Another Problem
+## Problem 4
 
 Imagine you were using this script to work with a complete genome alignment.  This could take some time and you want to have some idea of how much progress the script has made.  Can you please use the Unix `echo` command to the bash script to keep you informed about which command is executing.  You could (for example) ask the script to tell you when command 1, 2...5 is done and for which individual it has been completed.
 
