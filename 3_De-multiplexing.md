@@ -65,7 +65,7 @@ The first part (`/apps/RADpools`) directs the computer to run the program RADpoo
 
 ## Problem 2: How many reads do we have for each individual?
 
-As an exercise, please use the [`grep`](http://unixhelp.ed.ac.uk/CGI/man-cgi?grep) command to count how many reads we have for each individual.  A hint is that using `grep`, you can count the number of times an identifier character for each sequence appears in each file for each individual.  
+As an exercise, please use the [`grep`](http://unixhelp.ed.ac.uk/CGI/man-cgi?grep) command to count how many reads we have for each individual.  A hint is that using `grep`, you can count the number of times an identifier character for each sequence appears in each file for each individual.  Another hint is that you can get the manual for any `Unix` command by typing `man command`.
 
 How would your `grep` command differ for a `fasta` file compared to a `fastq` file?
 
