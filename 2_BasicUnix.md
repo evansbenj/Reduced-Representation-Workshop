@@ -117,7 +117,7 @@ If your script lacks errors, you should see the names of the fruit you had in th
 
 ## Problem 1: Now try it on your own
 
-As an exercise, please write and execute a bash script that will execute the script we just made (`fruit_script`) one hundred times.  Please use a for loop such as one of the ones described [here](http://www.cyberciti.biz/faq/bash-for-loop/).
+As an exercise, please write and execute a bash script that will execute the script we just made (`fruit_script`) one hundred times.  Please use a for loop such as one of the ones described [here](http://www.cyberciti.biz/faq/bash-for-loop/).  When you get this script working, please use the `scp` command to copy your script to your local computer.  
 
 
 ## OK, now lets learn how to de-multiplex Illumina data by clicking [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/3_De-multiplexing.md).
