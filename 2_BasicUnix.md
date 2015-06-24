@@ -6,11 +6,11 @@ All of the software in this workshop is available for free and runs on a Unix op
 
 ## Some Unix Basics
 
-To connect to the Unix system we are using, please type this:
+To connect to the Unix system we are using, please use thr application PuTTy to open a connection to this server:
 
-`ssh username@caf-hpc1.sun.ac.za`
+`caf-hpc1.sun.ac.za`
 
-Where `username` is your username.  You will be prompted for a password. Then, to see what directory you are in, type this:
+You will be prompted for your `username` and password. Once you are connected, to see what directory you are in, type this:
 
 `pwd`
 
