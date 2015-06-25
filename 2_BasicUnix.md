@@ -12,7 +12,7 @@ If you want to outsource the library preparation (I always do), I recommend usin
 
 ## How much does this cost and where can I do it?
 
-I've done RADseq multiple times at [Floragenix](http://www.floragenex.com/), which is located in Oregon, USA.  I've also done Genotype by Sequencing at [Cornell University](http://www.biotech.cornell.edu/brc/genomic-diversity-facility) in New York, USA.  The prices for a 95 sample run, including library preparation and one lane of single end Illumina sequencing but no bioinformatics were about US$7725 and $6,080 respectively. 
+I've done RADseq multiple times at [Floragenix](http://www.floragenex.com/), which is located in Oregon, USA.  I've also done Genotype by Sequencing at [Cornell University](http://www.biotech.cornell.edu/brc/genomic-diversity-facility) in New York, USA.  The prices for a 95 sample run, including library preparation and one lane of single end Illumina sequencing but no bioinformatics were about US$7725 and $6,080 respectively. I think RADseq services are also available at the University of Edinburgh.  I anticipate that the cost of these services will decline considerably over the next few years and that more sequencing centers will offer this service.
 
 ## Some Unix Basics
 
