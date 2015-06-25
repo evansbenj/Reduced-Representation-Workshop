@@ -42,9 +42,9 @@ You should be able to see a Phylip formatted file. You can press the space bar t
 
 ## Making a Quick phylogeny using `Phylip`
 
-Now we can use a program called `Phylip` to make a quick phylogenetic tree.  You can find out about the programs available in Phylip [here](http://evolution.genetics.washington.edu/phylip/phylip.html). We will make a neighborjoining tree because it is very quick to do. The Phylip programs that do this for us are called `dnadist` and `neighbor`.  Please open up a window on your browser to look at the commands for these programs.  Note that for your research I recommend to instead use maximum likelihood or Bayesian methods to make phylogenetic trees, for example using software such as [MrBayes](http://mrbayes.sourceforge.net/), [BEAST](http://beast.bio.ed.ac.uk/), and [RaxML](http://sco.h-its.org/exelixis/web/software/raxml/index.html).  We are using `neighbor` because it is quick.
+Now we can use a program called `Phylip` to make a quick phylogenetic tree.  You can find out about the programs available in Phylip [here](http://evolution.genetics.washington.edu/phylip/phylip.html). We will make a neighborjoining tree because it is very quick to do. The Phylip programs that do this for us are called `dnadist` and `neighbor`.  Please open up a window on your browser to look at the commands for these programs.  Note that for your research I recommend to instead use maximum likelihood or Bayesian methods to make phylogenetic trees, for example using software such as [MrBayes](http://mrbayes.sourceforge.net/), [BEAST](http://beast.bio.ed.ac.uk/), and [RaxML](http://sco.h-its.org/exelixis/web/software/raxml/index.html).  We are using `Phylip` because it is quick.
 
-To make a phylogenetic tree with Phylip, we first need to make a matrix of pairwise distances from our sequence data.  You can make a distance matrix by typing this:
+To make a phylogenetic tree with `Phylip`, we first need to make a matrix of pairwise distances from our sequence data.  You can make a distance matrix by typing this:
 
 `/apps/PHYLIP/3.696/exe/dnadist`
 
