@@ -6,7 +6,11 @@ Depending on your organism of study, there may or may not be a relatively closel
 
 ## A quick note about "completely" sequenced genomes
 
-FYI, essentially all completely sequenced genomes are not in fact completely sequenced.  Many regions such as centromeric and telomeric regions and some portions of sex-specific sex chromosomes contain many repetitive elements that pose challenges to sequencing and assembly.  Sometimes the individual sequenced is female, so no Y chromosome is available.  Sometimes (usually?) when a genome is said to be "complete" it actually is a bunch of "contigs", or contiguous sequence, that may or may not be assembled into "scaffolds" that include contigs plus Ns to represent intervenining regions that are not yet sequenced.  And even then, we can expect sequence and assembly errors in our reference genome that make it different from the real genome sequence.  On top of that, there is population level variation to contend with, including SNPs and insertion deletion events.  This makes our samples different from any reference genome as well.
+FYI, essentially all completely sequenced genomes are not in fact completely sequenced.  
+-Regions such as centromeric and telomeric regions and some portions of sex-specific sex chromosomes contain many repetitive elements that pose challenges to sequencing and assembly.  
+-Sometimes the individual sequenced is female, so no Y chromosome is available.  Sometimes (usually?) when a genome is said to be "complete" it actually is a bunch of "contigs", or contiguous sequence, that may or may not be assembled into "scaffolds" that include contigs plus Ns to represent intervenining regions that are not yet sequenced.  
+-And even then, we can expect sequence and assembly errors in our reference genome that make it different from the real genome sequence.  
+-On top of that, there is population level variation to contend with, including SNPs and insertion deletion events.  This makes our samples different from any reference genome as well.
 
 ## Preparing your reference genome
 
