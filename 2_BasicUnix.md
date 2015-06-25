@@ -13,9 +13,9 @@ Your statistical power, precision, and accuracy will depend on the quantity and 
 
 I've done RADseq multiple times at [Floragenix](http://www.floragenex.com/), which is located in Oregon, USA.  I've also done Genotype by Sequencing at [Cornell University](http://www.biotech.cornell.edu/brc/genomic-diversity-facility) in New York, USA.  The prices for a 95 RADseq sample run, including library preparation and one lane of single end Illumina sequencing but no bioinformatics was  US$7725.  The price of a 95 GBS run with two single end lanes of Illumina sequencing was $6,080 (considerably less expensive). I think RADseq services are also available at the University of Edinburgh.  I anticipate that the cost of these services will decline considerably over the next few years and that more sequencing centers will offer this service.
 
-## A quick note about Markdown
+## A quick note about Markdown and Github
 
-This website is written in a markup language called [Markdown](https://en.wikipedia.org/wiki/Markdown) and hosted by [github](www.github.com).
+This website is written in a markup language called [Markdown](https://en.wikipedia.org/wiki/Markdown) and hosted by [Github](www.github.com).  I've found both of these tools to be easy to learn and very useful.
 
 ## Some Unix Basics
 
