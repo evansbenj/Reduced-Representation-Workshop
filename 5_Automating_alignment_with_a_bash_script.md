@@ -69,6 +69,8 @@ Imagine you were using this script to work with a complete genome alignment.  Th
 ## Important homework to do before next class
 Please de-multiplex and align the complete dataset to your assigned chromosome before next class. This is **critical** for our group project, so please make sure you do it.
 
+## Next step...
+
 Once this is done, we can try working with the program [Stacks](http://creskolab.uoregon.edu/stacks/manual/).  Stacks is actually a suite of programs will help us compile these data, calculate summary statistics, and also output the data to other software for further analysis.  
 
 ## Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/6_Using_Stacks_with_a_reference_genome.md) to go to the next page on using Stacks.
