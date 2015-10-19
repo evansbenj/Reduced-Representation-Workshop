@@ -66,6 +66,9 @@ And now we should be able to execute the file.  Type this:
 
 Imagine you were using this script to work with a complete genome alignment.  This could take some time and you want to have some idea of how much progress the script has made.  Can you please use the Unix `echo` command to the bash script to keep you informed about which command is executing.  You could (for example) ask the script to tell you when command 1, 2...5 is done and for which individual it has been completed.
 
+## Important homework to do before next class
+Please de-multiplex and align the complete dataset to your assigned chromosome before next class. This is **critical** for our group project, so please make sure you do it.
+
 Once this is done, we can try working with the program [Stacks](http://creskolab.uoregon.edu/stacks/manual/).  Stacks is actually a suite of programs will help us compile these data, calculate summary statistics, and also output the data to other software for further analysis.  
 
 ## Please click [here](https://github.com/evansbenj/Reduced-Representation-Workshop/blob/master/6_Using_Stacks_with_a_reference_genome.md) to go to the next page on using Stacks.
