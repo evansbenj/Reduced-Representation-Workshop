@@ -42,19 +42,19 @@ Note that the term tab-delimited means that there is a tab between the columns o
 One way to quantify population structure is using the F-statistic (F<sub>ST</sub>).  F<sub>ST</sub> is an index of population structure that ranges from zero (no population structure) to one (two populations are each fixed for different alleles.  Let's calulate F<sub>ST</sub> between the two populations specified avove using `Stacks`.  To do this, please type:
 
 ```
-/apps/stacks/1.29/bin/ref_map.pl -S -b 1 -n 0 \
-	-O ~/monkey/population_map \
-	-o ~/monkey/Stacks_Results \
-   	-s ~/monkey/PF515_sorted.bam \
-    -s ~/monkey/PM561_sorted.bam \
-    -s ~/monkey/PM565_sorted.bam \
-    -s ~/monkey/PM566_sorted.bam \
-    -s ~/monkey/PM567_sorted.bam \
-    -s ~/monkey/PM582_sorted.bam \
-    -s ~/monkey/PM584_sorted.bam \
-    -s ~/monkey/PM592_sorted.bam \
-    -s ~/monkey/PM602_sorted.bam \
-   	-e /apps/stacks/1.29/bin -X "populations:--fstat" \
+/usr/local/stacks/bin/ref_map.pl -S -b 1 -n 0 \
+	-O ~/my_monkey_data/population_map \
+	-o ~/my_monkey_data/Stacks_Results \
+   	-s ~/my_monkey_data/PF515_sorted.bam \
+    -s ~/my_monkey_data/PM561_sorted.bam \
+    -s ~/my_monkey_data/PM565_sorted.bam \
+    -s ~/my_monkey_data/PM566_sorted.bam \
+    -s ~/my_monkey_data/PM567_sorted.bam \
+    -s ~/my_monkey_data/PM582_sorted.bam \
+    -s ~/my_monkey_data/PM584_sorted.bam \
+    -s ~/my_monkey_data/PM592_sorted.bam \
+    -s ~/my_monkey_data/PM602_sorted.bam \
+   	-e /usr/local/stacks/bin/ -X "populations:--fstat" \
 ```
 
 In this command, the backslashes `\` just indicate that the command is continued on the next line.  The program we are executing is a Perl script caled `ref_map.pl`.  Similar to the bash scripts we wrote earlier, this program just executes a bunch of other prorgams that come in the `Stacks` package. As you can see in the [`Stacks` manual](http://catchenlab.life.illinois.edu/stacks/comp/ref_map.php) the flags `-S`, `-b`, and `-n` respectively tell Stacks to disable recording the data in an SQL database (this is beyond the scope of this workshop), process the batchID 1, and allow zero mismatches between loci when building the catalog.  Other flags such as `-O`, `-o`, and `-s` respectively tell `Stacks` where the population map file is, where to write the results, and where the input bam files for each individual are.  The `-e` flag tells `Stacks` where the binary files that `refmap.pl` executes are located.
