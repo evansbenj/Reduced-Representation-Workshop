@@ -19,7 +19,7 @@ The pipeline of programs within `Stacks` can be run in a batch using a `Perl` sc
 
 To get started, lets first make a directory within the `~/my_monkey_data` directory that has our data called `Stacks_Results`.  To do this, please type this command:
 
-`mkdir ~/my_monkey_directory/Stacks_Results`
+`mkdir ~/my_monkey_data/Stacks_Results`
 
 ## Analysis of population structure
 
