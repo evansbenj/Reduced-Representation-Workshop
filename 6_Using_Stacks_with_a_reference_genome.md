@@ -17,17 +17,9 @@ Once loci are compiled within and across individuals, we can use the program `po
 
 The pipeline of programs within `Stacks` can be run in a batch using a `Perl` script that comes with the program called `refmap.pl`.  This script functions in a similar way to the bash scripts we have used already but it has some added features, such as allowing options to be specified using flags.
 
-To get started, lets first make a directory within the `monkey` directory that has our data called `Stacks_Results`.  To do this, first make sure you are in the `monkey` directory by typing this:
+To get started, lets first make a directory within the `~/my_monkey_data` directory that has our data called `Stacks_Results`.  To do this, please type this command:
 
-`pwd`
-
-If the path that is shown is not the `monkey` directory, please change to it by typing this:
-
-`cd ~/monkey`
-
-OK, now please make a new direcotry by typing this:
-
-`mkdir Stacks_Results`
+`mkdir ~/my_monkey_directory/Stacks_Results`
 
 ## Analysis of population structure
 
