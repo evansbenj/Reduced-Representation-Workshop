@@ -23,7 +23,7 @@ To get started, lets first make a directory within the `~/my_monkey_data` direct
 
 ## Analysis of population structure
 
-Let's first examine whether population structure is present within our sample by defining two populations.  This can be done in `Stacks` by making a file called a `population map`.  Use your favorite text editor to generate a file that contans this tab delimited information:
+Let's first examine whether population structure is present within our sample by defining two populations.  This can be done in `Stacks` by making a file called a `population_map`.  Use your favorite text editor to generate a file that contans this tab delimited information:
 
 ```
 PF515_sorted	population_1
