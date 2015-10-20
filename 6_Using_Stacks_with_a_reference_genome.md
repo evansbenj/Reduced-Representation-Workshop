@@ -23,7 +23,7 @@ To get started, lets first make a directory within the `~/my_monkey_data` direct
 
 ## Analysis of population structure
 
-Let's first examine whether population structure is present within our sample by defining two populations.  This can be done in `Stacks` by making a file called a `population_map`.  Use your favorite text editor to generate a file that contans this tab delimited information:
+Let's first examine whether population structure is present within our sample by defining two populations.  This can be done in `Stacks` by making a file called a `population_map` in your home directory.  Use your favorite text editor to generate a file that contans this tab delimited information:
 
 ```
 PF515_sorted	population_1
@@ -43,7 +43,7 @@ One way to quantify population structure is using the F-statistic (F<sub>ST</sub
 
 ```
 /usr/local/stacks/bin/ref_map.pl -S -b 1 -n 0 \
-	-O ~/my_monkey_data/population_map \
+	-O ~/population_map \
 	-o ~/my_monkey_data/Stacks_Results \
    	-s ~/my_monkey_data/PF515_sorted.bam \
     -s ~/my_monkey_data/PM561_sorted.bam \
