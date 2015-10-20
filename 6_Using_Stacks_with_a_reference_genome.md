@@ -23,11 +23,7 @@ To get started, lets first make a directory within the `~/my_monkey_data` direct
 
 ## Analysis of population structure
 
-Let's first examine whether population structure is present within our sample by defining two populations.  This can be done in `Stacks` by making a file called a `population map`.  Use emails to generate a file like this:
-
-`emacs population_map`
-
-and now enter this (tab delimited) information:
+Let's first examine whether population structure is present within our sample by defining two populations.  This can be done in `Stacks` by making a file called a `population map`.  Use your favorite text editor to generate a file that contans this tab delimited information:
 
 ```
 PF515_sorted	population_1
@@ -41,7 +37,7 @@ PM592_sorted	population_2
 PM602_sorted	population_2
 ```
 
-Note that the term tab-delimited means that there is a tab between the columns of information.  Please type `Ctrl-X` and then `Ctrl-S` to save this file and then `Ctrl-X` and then `Ctrl-C` to exit emacs.  This file will be used to tell Stacks that the first five samples are from one population and the last four samples are from another population.
+Note that the term tab-delimited means that there is a tab between the columns of information. Please make sure the columns have a tab between them. This file will be used to tell Stacks that the first five samples are from one population and the last four samples are from another population.
 
 One way to quantify population structure is using the F-statistic (F<sub>ST</sub>).  F<sub>ST</sub> is an index of population structure that ranges from zero (no population structure) to one (two populations are each fixed for different alleles.  Let's calulate F<sub>ST</sub> between the two populations specified avove using `Stacks`.  To do this, please type:
 
